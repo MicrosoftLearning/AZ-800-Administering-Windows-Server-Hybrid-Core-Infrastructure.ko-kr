@@ -177,7 +177,7 @@ ms.locfileid: "137906982"
    ```powershell
    docker search Microsoft
    ```
-1. 다음 명령을 입력한 다음 Enter 키를 눌러 IIS(인터넷 정보 서비스) 설치가 포함된 Nano 서버 이미지를 다운로드합니다.
+1. 다음 명령을 입력한 다음 Enter 키를 눌러 IIS(Internet Information Services) 설치가 포함된 Nano 서버 이미지를 다운로드합니다.
 
    ```powershell
    docker pull nanoserver/iis

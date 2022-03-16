@@ -40,7 +40,7 @@ ms.locfileid: "137907024"
    - 암호: **Pa55w.rd**
    - 도메인: **CONTOSO**
 
-이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 Azure 구독 및 구독에 소유자 또는 기여자 역할이 있는 사용자 계정과, 해당 구독과 연결된 Azure AD(Azure Active Directory) 테넌트에 전역 관리자 역할이 있는지 확인합니다.
+이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 Azure 구독 및 구독에 Owner 또는 Contributor 역할이 있는 사용자 계정과, 해당 구독과 연결된 Azure AD(Azure Active Directory) 테넌트에 전역 관리자 역할이 있는지 확인합니다.
 
 ## <a name="exercise-1-provisioning-azure-vms-running-windows-server"></a>연습 1: Windows Server에서 실행하는 Azure VM 프로비전
 
@@ -121,7 +121,7 @@ ms.locfileid: "137907024"
 
    > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
 
-1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다. 
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다. 
 
    >**참고**: 링크가 작동하지 않는다면 **SEA-ADM1** 에서 **WindowsAdminCenter.msi** 파일로 이동하여 상황에 맞는 메뉴를 연 다음 **복구** 를 선택하세요. 복구가 완료되면 Microsoft Edge를 새로 고칩니다. 
 
@@ -135,7 +135,7 @@ ms.locfileid: "137907024"
 
 #### <a name="task-2-create-an-azure-network-adapter"></a>작업 2: Azure 네트워크 어댑터 만들기
 
-1. **SEA-ADM1** 에서 Windows Admin Center를 표시하는 Microsoft Edge 창에서 Azure 네트워크 어댑터를 다시 만듭니다.
+1. **SEA-ADM1** 에서 Windows Admin Center를 표시하는 Microsoft Edge를 창에서 Azure 네트워크 어댑터를 다시 만듭니다.
 1. 다음 설정을 사용하여 Azure 네트워크 어댑터를 만듭니다.
 
    |설정|값|
@@ -148,7 +148,7 @@ ms.locfileid: "137907024"
    |클라이언트 주소 공간|192.168.0.0/24|
    |인증 인증서|자동 생성된 자체 서명된 루트 및 클라이언트 인증서|
 
-1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge 창으로 전환하고 이름이 **WAC-Created-vpngw-** 로 시작하는 새 가상 네트워크 게이트웨이가 프로비전되고 있는지 확인합니다.
+1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge를 창으로 전환하고 이름이 **WAC-Created-vpngw-** 로 시작하는 새 가상 네트워크 게이트웨이가 프로비전되고 있는지 확인합니다.
 
    >**참고**: Azure 가상 네트워크 게이트웨이 프로비전은 최대 45분이 소요됩니다. 프로비전이 완료될 때까지 기다리지 말고 다음 연습을 진행하세요.
 
@@ -168,12 +168,12 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
 1. **SEA-ADM1** 에서 Azure Portal이 표시된 브라우저 창으로 전환합니다.
 1. Azure Portal의 Cloud Shell 창에서 PowerShell 세션을 시작합니다.
 1. Cloud Shell 창에서 **C:\\Labfiles\\Lab04\\Deploy-WACAzVM.ps1** 파일을 Cloud Shell 홈 디렉터리에 업로드합니다.
-1. Cloud Shell 창에서 다음 명령을 실행하여 Windows Admin Center 프로비저닝 스크립트에서 사용하는 **AzureRm** PowerShell cmdlet의 호환성을 사용하도록 설정합니다.
+1. Cloud Shell 창에서 다음 명령을 실행하여 Windows Admin Center 프로비전 스크립트에서 사용하는 **AzureRm** PowerShell cmdlet의 호환성을 사용하도록 설정합니다.
 
    ```powershell
    Enable-AzureRmAlias -Scope Process
    ```
-1. 다음 명령을 실행하여 Windows Admin Center 프로비저닝 스크립트를 실행하는 데 필요한 변수의 값을 설정합니다.
+1. 다음 명령을 실행하여 Windows Admin Center 프로비전 스크립트를 실행하는 데 필요한 변수의 값을 설정합니다.
 
    ```powershell
    $rgName = 'AZ800-L0401-RG'
@@ -202,7 +202,7 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
    install-module pswsman
    Disable-WSManCertVerification -All
    ```
-1. 다음 명령을 실행하여 프로비저닝 스크립트를 시작합니다.
+1. 다음 명령을 실행하여 프로비전 스크립트를 시작합니다.
 
    ```powershell
    ./Deploy-WACAzVM.ps1 @scriptParams
@@ -210,7 +210,7 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
 1. 로컬 관리자 계정의 이름을 입력하라는 메시지가 표시되면 **Student** 를 입력합니다.
 1. 로컬 관리자 계정의 암호를 입력하라는 메시지가 표시되면 **Pa55w.rd1234** 를 입력합니다.
 
-    >**참고**: 프로비저닝 스크립트가 완료될 때까지 기다리세요. 5분 정도 걸릴 수 있습니다.
+    >**참고**: 프로비전 스크립트가 완료될 때까지 기다리세요. 5분 정도 걸릴 수 있습니다.
 
 1. 스크립트가 성공적으로 완료되었는지 확인하고, Windows Admin Center 설치를 호스트하는 Azure VM의 정규화된 이름이 포함된 URL을 제공하는 최종 메시지를 확인합니다.
 
@@ -245,7 +245,7 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
 
 #### <a name="task-2-enable-powershell-remoting-on-an-azure-vm"></a>작업 2: Azure VM에서 PowerShell 원격 작업 사용
 
-1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge 창에서 **az800l04-vm0** Azure VM의 페이지로 이동합니다.
+1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge를 창에서 **az800l04-vm0** Azure VM의 페이지로 이동합니다.
 1. **az800l04-vm0** 페이지에서 **명령 실행** 기능으로 다음 명령을 실행하여 사용하지 않도록 설정된 경우 Windows 원격 관리를 사용하도록 설정합니다.
 
    ```powershell
@@ -266,7 +266,7 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
 
 #### <a name="task-3-connect-to-an-azure-vm-by-using-the-windows-admin-center-gateway-running-in-azure-vm"></a>작업 3: Azure VM에서 실행하는 Windows Admin Center 게이트웨이를 사용하여 Azure VM에 연결
 
-1. **SEA-ADM1** 에 있는, **az800l04-vmwac** Azure VM에서 실행하는 Windows Admin Center 게이트웨이의 인터페이스를 표시하는 Microsoft Edge 창에서 해당 이름을 사용하여 Azure VM **az800l04-vm0** 에 대한 연결을 추가합니다.
+1. **SEA-ADM1** 에 있는, **az800l04-vmwac** Azure VM에서 실행하는 Windows Admin Center 게이트웨이의 인터페이스를 표시하는 Microsoft Edge를 창에서 해당 이름을 사용하여 Azure VM **az800l04-vm0** 에 대한 연결을 추가합니다.
 1. 메시지가 표시되면 **Student** 사용자 이름과 **Pa55w.rd1234** 암호를 사용하여 인증합니다.
 1. VM에 성공적으로 연결되면 Windows Admin Center에서 **az800l04-vmwac** Azure VM의 개요 창을 검토합니다.
 
@@ -283,7 +283,7 @@ Azure 관련 요금을 최소화하기 위해 이 랩 전체에서 프로비전�
 
 #### <a name="task-1-start-a-powershell-session-in-cloud-shell"></a>작업 1: Cloud Shell에서 PowerShell 세션 시작
 
-1. **SEA-ADM1** 에서 Azure Portal이 표시된 Microsoft Edge 창으로 전환합니다.
+1. **SEA-ADM1** 에서 Azure Portal이 표시된 Microsoft Edge를 창으로 전환합니다.
 1. Azure Portal의 Cloud Shell 창에서 PowerShell 세션을 엽니다.
 
 #### <a name="task-2-identify-all-azure-resources-provisioned-in-the-lab"></a>작업 2: 랩에서 프로비전한 모든 Azure 리소스 식별

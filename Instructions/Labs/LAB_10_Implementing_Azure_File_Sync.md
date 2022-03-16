@@ -40,7 +40,7 @@ Contoso의 런던 본사와 시애틀 지점 간의 DFS(분산 파일 시스템)
    - 암호: **Pa55w.rd**
    - 도메인: **CONTOSO**
 
-이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 구독에서 소유자 또는 기여자 역할이 있는 Azure 구독 및 사용자 계정이 있는지 확인하세요.
+이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 구독에서 Owner 또는 Contributor 역할이 있는 Azure 구독 및 사용자 계정이 있는지 확인하세요.
 
 ## <a name="exercise-1-implementing-dfs-replication-in-your-on-premises-environment"></a>연습 1: 온-프레미스 환경에서 DFS 복제 구현
 
@@ -138,8 +138,8 @@ DFS 복제 환경을 파일 동기화로 마이그레이션할 준비를 하려�
 1. **SEA-ADM1** 의 파일 탐색기에서 **C:\\Labfiles\\Lab10** 폴더로 이동한 다음 Windows PowerShell ISE 창의 스크립트 창에서 **Install-FileSyncServerCore.ps1** 을 엽니다.
 1. **Windows PowerShell ISE** 스크립트 창에서 스크립트를 검토하고 실행하여 **SEA-SVR1** 에 파일 동기화 에이전트를 설치합니다.
 1. 메시지가 표시되면 Azure 구독에 대해 인증합니다. 
-1. Azure Portal에서 **FileSync1** Storage Sync Service에서 등록된 서버를 새로 고친 다음 **SEA-SVR1.Contoso.com** 이 이제 등록되어 있음을 지적합니다.
-1. 파일 탐색기에서 **\\\\SEA-SVR1\\Data** 를 연 다음 폴더에 **File1.txt** 가 포함되어 있지 않음을 지적합니다.
+1. Azure Portal에서 **FileSync1** Storage Sync Service에서 등록된 서버를 새로 고친 다음 **SEA-SVR1.Contoso.com** 이 이제 등록되어 있음을 보여줍니다.
+1. 파일 탐색기에서 **\\\\SEA-SVR1\\Data** 를 연 다음 폴더에 **File1.txt** 가 포함되어 있지 않음을 보여줍니다.
 1. Azure Portal을 사용하여 **SEA-SVR2.Contoso.com** 의 **S:\\Data** 를 **Sync1** 에 대한 서버 엔드포인트로 추가합니다.
 1. 파일 탐색기를 사용하여 **SEA-SVR1Data** **에서\\\\\\\\File1.txt** 를 사용할 수 있는지 확인합니다.
 

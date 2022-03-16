@@ -13,7 +13,7 @@ ms.locfileid: "137907001"
 
 ## <a name="scenario"></a>시나리오
 
-현재 인프라와 관련된 문제를 해결해야 합니다. 운영 모델이 오래되었고, 자동화가 제한적으로 사용되며, 정보 보안 팀은 Windows Server 기반 워크로드를 실행하는 Azure VM에 적용해야 하는 추가 컨트롤을 우려하고 있습니다. 여러분은 Windows Server를 실행하는 Azure VM을 위한 자동화된 배포 및 구성 프로세스를 개발하고 구현하기로 했습니다.
+현재 인프라와 관련된 문제를 해결해야 합니다. 운영 모델이 오래되었고, 자동화가 제한적으로 사용되며, 정보 보안 팀은 Windows Server 기반 워크로드를 실행하는 Azure VM에 추가적인 컨트롤을 적용해야 한다는 점을 우려하고 있습니다. 여러분은 Windows Server를 실행하는 Azure VM을 위해 자동화된 배포 및 구성 프로세스를 개발하고 구현하기로 했습니다.
 
 이 프로세스에는 Azure VM 확장을 통한 ARM(Azure Resource Manager) 템플릿 및 OS 구성이 동반됩니다. 또한 이 프로세스는 온-프레미스 시스템에 이미 적용된 메커니즘에 추가 보안 보호 메커니즘(AppLocker를 통한 애플리케이션 허용 목록, 파일 무결성 검사, 적응형 네트워크/DDoS 보호 등)을 통합합니다. 그리고 JIT 기능을 활용하여 Azure VM에 대한 관리 액세스를 런던 본사와 연결된 공용 IP 주소 범위로 제한합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "137907001"
    - 암호: **Pa55w.rd**
    - 도메인: **CONTOSO**
 
-이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 구독에서 소유자 또는 기여자 역할이 있는 Azure 구독 및 사용자 계정이 있는지 확인하세요.
+이 랩에서는 사용 가능한 VM 환경과 Azure 구독을 사용합니다. 랩을 시작하기 전에 구독에서 Owner 또는 Contributor 역할이 있는 Azure 구독 및 사용자 계정이 있는지 확인하세요.
 
 ## <a name="exercise-1-authoring-arm-templates-for-azure-vm-deployment"></a>연습 1: Azure VM 배포용 ARM 템플릿 권한 부여
 
@@ -64,7 +64,7 @@ Azure 기반 작업을 간소화하기 위해 Azure VM에 대한 Windows Server�
 이 작업에서는 Azure 구독에 연결하고 클라우드용 Microsoft Defender의 향상된 보안을 사용하도록 설정합니다.
 
 1. **SEA-ADM1** 에 연결한 다음, 필요하다면 **Pa55w.rd** 암호를 이용해 **CONTOSO\\Administrator** 로 로그인합니다.
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 소유자 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 Owner 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
 
 >**참고**: Azure 구독에서 클라우드용 Microsoft Defender를 이미 사용하도록 설정했다면 이 작업의 나머지 단계를 건너뛰고 다음 단계로 바로 이동하세요.
 
@@ -77,15 +77,15 @@ Azure 기반 작업을 간소화하기 위해 Azure VM에 대한 Windows Server�
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용할 Azure 구독의 이름|
-   |Resource group|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
+   |구독|이 랩에서 사용할 Azure 구독의 이름|
+   |리소스 그룹|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
    |가상 머신 이름|**az800l06-vm0**|
    |지역|Azure 가상 머신을 프로비전할 수 있는 Azure 지역의 이름을 사용합니다.|
    |가용성 옵션|인프라 중복 필요 없음|
    |이미지|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
    |Azure Spot 인스턴스|예|
    |크기|**Standard_D2s_v3**|
-   |사용자 이름|**학생**|
+   |사용자 이름|**Student**|
    |암호|**Pa55w.rd1234**|
    |공용 인바운드 포트|없음|
    |기존 Windows Server 라이선스를 사용하시겠습니까?|아니요|
@@ -117,10 +117,10 @@ Azure 기반 작업을 간소화하기 위해 Azure VM에 대한 Windows Server�
 
 이 연습의 주요 작업은 다음과 같습니다.
 
-1. Azure VM 배포를 위한 ARM 템플릿 및 매개 변수 파일을 검토합니다.
+1. Azure VM 배포를 위해 ARM 템플릿 및 매개 변수 파일을 검토합니다.
 1. 기존 템플릿에 Azure VM 확장 섹션을 추가합니다.
 
-#### <a name="task-1-review-the-arm-template-and-parameters-files-for-azure-vm-deployment"></a>작업 1: Azure VM 배포를 위한 ARM 템플릿 및 매개 변수 파일 검토
+#### <a name="task-1-review-the-arm-template-and-parameters-files-for-azure-vm-deployment"></a>작업 1: Azure VM 배포를 위해 ARM 템플릿 및 매개 변수 파일 검토
 
 1. 다운로드한 보관 파일의 내용을 **C:\\Labfiles\\Mod06** 폴더에 추출합니다.
 1. 메모장에서 **template.json** 파일을 열고 내용을 검토합니다. 메모장 창을 계속 열어 두세요.
@@ -128,7 +128,7 @@ Azure 기반 작업을 간소화하기 위해 Azure VM에 대한 Windows Server�
 
 #### <a name="task-2-add-an-azure-vm-extension-section-to-the-existing-template"></a>작업 2: 기존 템플릿에 Azure VM 확장 섹션 추가
 
-1. 랩 VM에서, **template.json** 파일의 내용을 표시하는 메모장 창에서 `    "resources": [` 줄) 바로 아래에 다음 코드를 삽입합니다.
+1. 랩 VM에서, **template.json** 파일의 내용을 표시하는 메모장 창에서 `    "resources": [` 줄 바로 아래에 다음 코드를 삽입합니다.
 
    ```json
         {
@@ -171,8 +171,8 @@ ARM 템플릿을 구성하면 개념 증명 Azure 구독으로의 배포를 수�
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용 중인 Azure 구독의 이름|
-   |Resource group|**AZ800-L0601-RG**|
+   |구독|이 랩에서 사용 중인 Azure 구독의 이름|
+   |리소스 그룹|**AZ800-L0601-RG**|
    |지역|Azure VM을 프로비전할 수 있는 Azure 지역의 이름|
    |관리자 암호|**Pa55w.rd1234**|
 
@@ -228,8 +228,8 @@ Windows Server를 실행하는 Azure VM을 온-프레미스 관리 워크스테�
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용 중인 Azure 구독의 이름|
-   |Resource group|**AZ800-L0601-RG**|
+   |구독|이 랩에서 사용 중인 Azure 구독의 이름|
+   |리소스 그룹|**AZ800-L0601-RG**|
    |이름|**az800l06-vm0-nsg1**|
    |지역|Azure VM **az800l06-vm0** 을 프로비전한 Azure 지역의 이름|
 
@@ -277,7 +277,7 @@ Windows Server를 실행하는 Azure VM을 온-프레미스 관리 워크스테�
    
    |설정|값|
    |---|---|
-   |사용자 이름|**학생**|
+   |사용자 이름|**Student**|
    |암호|**Pa55w.rd1234**|
 
 1. 원격 데스크톱을 통해 Azure VM에서 실행하는 운영 체제에 성공적으로 액세스할 수 있는지 확인하고 원격 데스크톱 세션을 닫습니다.

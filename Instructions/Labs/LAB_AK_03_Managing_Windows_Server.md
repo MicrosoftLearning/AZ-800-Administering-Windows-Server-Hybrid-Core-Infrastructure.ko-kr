@@ -95,7 +95,7 @@ ms.locfileid: "137906990"
    ```powershell
    Enter-PSSession -ComputerName SEA-DC1
    ```
-1. **[SEA-DC1]** 프롬프트에서 다음 명령을 입력하고 Enter 키를 눌러 AppIDSvc(애플리케이션 ID 서비스)의 상태를 표시합니다.
+1. **[SEA-DC1]** 프롬프트에서 다음 명령을 입력하고 Enter 키를 눌러 애플리케이션 ID 서비스(AppIDSvc)의 상태를 표시합니다.
 
    ```powershell
    Get-Service -Name AppIDSvc
@@ -108,7 +108,7 @@ ms.locfileid: "137906990"
    ```powershell
    Start-Service -Name AppIDSvc
    ```
-1. **[SEA-DC1]** 프롬프트에서 다음 명령을 입력하고 Enter 키를 눌러 AppIDSvc(애플리케이션 ID 서비스)의 상태를 표시합니다.
+1. **[SEA-DC1]** 프롬프트에서 다음 명령을 입력하고 Enter 키를 눌러 애플리케이션 ID 서비스(AppIDSvc)의 상태를 표시합니다.
 
    ```powershell
    Get-Service -Name AppIDSvc

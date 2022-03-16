@@ -35,15 +35,15 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용할 Azure 구독의 이름|
-   |Resource group|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
+   |구독|이 랩에서 사용할 Azure 구독의 이름|
+   |리소스 그룹|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
    |가상 머신 이름|**az800l06-vm0**|
    |지역|Azure 가상 머신을 프로비전할 수 있는 Azure 지역의 이름을 사용합니다.|
    |가용성 옵션|인프라 중복 필요 없음|
    |이미지|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
    |Azure Spot 인스턴스|예|
    |크기|**Standard_D2s_v3**|
-   |사용자 이름|**학생**|
+   |사용자 이름|**Student**|
    |암호|**Pa55w.rd1234**|
    |공용 인바운드 포트|없음|
    |기존 Windows Server 라이선스를 사용하시겠습니까?|아니요|
@@ -142,8 +142,8 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용 중인 Azure 구독의 이름|
-   |Resource group|**AZ800-L0601-RG**|
+   |구독|이 랩에서 사용 중인 Azure 구독의 이름|
+   |리소스 그룹|**AZ800-L0601-RG**|
    |지역|Azure VM을 프로비전할 수 있는 Azure 지역의 이름|
    |관리자 암호|**Pa55w.rd1234**|
 
@@ -193,8 +193,8 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |Subscription|이 랩에서 사용 중인 Azure 구독의 이름|
-   |Resource group|**AZ800-L0601-RG**|
+   |구독|이 랩에서 사용 중인 Azure 구독의 이름|
+   |리소스 그룹|**AZ800-L0601-RG**|
    |이름|**az800l06-vm0-nsg1**|
    |지역|Azure VM **az800l06-vm0** 을 프로비전한 Azure 지역의 이름|
 
@@ -255,7 +255,7 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |사용자 이름|**학생**|
+   |사용자 이름|**Student**|
    |암호|**Pa55w.rd1234**|
 
 1. 원격 데스크톱을 통해 Azure VM에서 실행하는 운영 체제에 성공적으로 액세스할 수 있는지 확인하고 원격 데스크톱 세션을 닫습니다.

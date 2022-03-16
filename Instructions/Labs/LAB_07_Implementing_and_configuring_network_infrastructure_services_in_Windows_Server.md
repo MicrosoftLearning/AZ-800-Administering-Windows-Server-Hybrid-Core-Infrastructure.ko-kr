@@ -13,7 +13,7 @@ ms.locfileid: "137907000"
 
 ## <a name="scenario"></a>시나리오
 
-Contoso, Ltd.는 네트워크 서비스에 관한 복잡한 요구 사항이 있는 대형 조직입니다. 이러한 요구 사항을 충족하려면 DHCP를 배포하고 구성하여 서비스 가용성 보장 가능성을 높여야 합니다. Contoso 내의 부서인 Trey Research가 테스트 영역에 자체 DNS 서버를 가질 수 있도록 DNS도 설정해야 합니다. 마지막으로, Windows Admin Center에 대한 원격 액세스를 제공하고 웹 애플리케이션 프록시를 사용하여 액세스를 보호합니다.
+Contoso, Ltd.는 네트워크 서비스에 관한 복잡한 요구 사항이 있는 대형 조직입니다. 이러한 요구 사항을 충족하려면 DHCP를 배포하고 구성하여 서비스 가용성 보장 가능성을 높여야 합니다. Contoso의 한 부서인 Trey Research가 테스트 영역에 자체 DNS 서버를 가질 수 있도록 DNS도 설정해야 합니다. 마지막으로, Windows Admin Center에 대한 원격 액세스를 제공하고 웹 애플리케이션 프록시를 사용하여 액세스를 보호합니다.
 
 ## <a name="objectives"></a>목표
 
@@ -49,7 +49,7 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 
 1. DHCP 역할을 설치합니다.
 1. DHCP 서버에 권한을 부여합니다.
-1. 범위 만들기.
+1. 범위를 만듭니다.
 1. DHCP 장애 조치(failover)를 구성합니다.
 1. DHCP 기능을 확인합니다.
 
@@ -72,7 +72,7 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 
    > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
 
-1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다.
 
    >**참고**: 링크가 작동하지 않는다면 **SEA-ADM1** 에서 **WindowsAdminCenter.msi** 파일로 이동하여 상황에 맞는 메뉴를 연 다음 **복구** 를 선택하세요. 복구가 완료되면 Microsoft Edge를 새로 고칩니다. 
    
@@ -85,7 +85,7 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 1. **도구** 목록에서 **역할 및 기능을** 사용하여 **SEA-SVR1** 에 DHCP 역할을 설치합니다.
 1. **도구** 목록에서 **DHCP** 도구로 이동하여 **DHCP PowerShell** 도구를 설치합니다. 
 
-   > **참고**: **sea-svr1.contoso.com** 의 도구 창에서 **DHCP** 항목을 사용할 수 없다면 **Microsoft Edge** 페이지를 새로 고친 다음 다시 시도하세요.
+   > **참고**: **sea-svr1.contoso.com** 의 도구 창에서 **DHCP** 항목을 사용할 수 없다면 **Microsoft Edge를** 페이지를 새로 고친 다음 다시 시도하세요.
 
 ### <a name="task-2-authorize-the-dhcp-server"></a>작업 2: DHCP 서버에 권한 부여
 
@@ -139,7 +139,7 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 
 ### <a name="scenario"></a>시나리오
 
-Contoso 내의 Trey Research 위치에서 근무하는 직원은 자체 DNS 서버를 통해 테스트 환경에서 레코드를 만들어야 합니다. 하지만 이들의 테스트 환경에서는 여전히 Contoso의 인터넷 DNS 이름과 리소스 레코드를 확인할 수 있어야 합니다. 이러한 요구 사항을 충족하기 위해 전달을 ISP(인터넷 서비스 공급자)로 구성하고 **SEA-DC1** 으로 전달되는 **contoso.com** 의 조건부 전달자를 만듭니다. 또한 사용자 위치에 따라 다른 IP 주소를 확인해야 하는 테스트 애플리케이션도 있습니다. 본사 사용자의 경우에는 다른 방식으로 확인할 수 있도록, DNS 정책을 사용하여 **testapp.treyresearch.net** 을 구성합니다.
+Contoso의 한 Trey Research 위치에서 근무하는 직원은 자체 DNS 서버를 통해 테스트 환경에서 레코드를 만들어야 합니다. 하지만 이들의 테스트 환경에서는 여전히 Contoso의 인터넷 DNS 이름과 리소스 레코드를 확인할 수 있어야 합니다. 이러한 요구 사항을 충족하기 위해 전달을 ISP(인터넷 서비스 공급자)로 구성하고 **SEA-DC1** 으로 전달되는 **contoso.com** 의 조건부 전달자를 만듭니다. 또한 사용자 위치에 따라 다른 IP 주소를 확인해야 하는 테스트 애플리케이션도 있습니다. 본사 사용자의 경우에는 다른 방식으로 확인할 수 있도록, DNS 정책을 사용하여 **testapp.treyresearch.net** 을 구성합니다.
 
 이 연습의 주요 작업은 다음과 같습니다.
 
@@ -155,7 +155,7 @@ Contoso 내의 Trey Research 위치에서 근무하는 직원은 자체 DNS 서�
 1. **SEA-ADM1** 에서 **sea-svr1.contoso.com** 에 연결된 Windows Admin Center의 **도구** 목록에 있는 **역할 및 기능** 을 사용하여 **SEA-SVR1** 에 DNS 역할을 설치합니다.
 1. **도구** 목록에서 **DNS** 도구로 이동하여 **DNS PowerShell** 도구를 설치합니다. 
 
-   > **참고**: **sea-svr1.contoso.com** 의 **도구** 목록에서 **DNS** 항목을 사용할 수 없다면 **Microsoft Edge** 페이지를 새로 고친 다음 다시 시도하세요.
+   > **참고**: **sea-svr1.contoso.com** 의 **도구** 목록에서 **DNS** 항목을 사용할 수 없다면 **Microsoft Edge를** 페이지를 새로 고친 다음 다시 시도하세요.
 
 ### <a name="task-2-create-a-dns-zone"></a>작업 2: DNS 영역 만들기
 

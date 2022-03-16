@@ -63,7 +63,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 1. **SEA-ADM1** 에서 Microsoft Edge를 시작한 다음 Azure Portal로 이동합니다.
 1. 강사가 제공하는 자격 증명을 사용하여 Azure Portal에 로그인합니다.
 1. Azure Portal에서 **Azure Active Directory** 로 이동합니다.
-1. **Azure Active Directory** 페이지에서 **사용자 지정 도메인 이름** 을 선택한 다음 `contoso.com`을 추가합니다.
+1. **Azure Active Directory** 페이지에서 **사용자 지정 도메인 이름을** 선택한 다음 `contoso.com`을 추가합니다.
 1. 도메인을 확인하는 데 사용할 DNS 레코드 유형을 검토한 다음 도메인 이름을 확인하지 않고 창을 닫습니다.
 
    > **참고**: 일반적으로는 DNS 레코드를 사용해 도메인을 확인하지만 이 랩에서는 확인된 도메인을 사용할 필요가 없습니다.
@@ -74,7 +74,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
    - 사용자 이름: **admin**
 
-   > **참고**: **사용자 이름** 의 도메인 이름 드롭다운 메뉴에 `onmicrosoft.com`로 끝나는 기본 도메인 이름이 나열되는지 확인합니다.
+   > **참고**: **사용자 이름의** 도메인 이름 드롭다운 메뉴에 `onmicrosoft.com`로 끝나는 기본 도메인 이름이 나열되는지 확인합니다.
 
    - 이름: **admin**
    - 역할: **전역 관리자**
@@ -103,15 +103,15 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-1-install-idfix"></a>작업 1: IdFix 설치
 
 1. **SEA-ADM1** 에서 Microsoft Edge 연 다음 **https://github.com/microsoft/idfix** 로 이동합니다.
-1. **Github** 페이지의 **ClickOnce 시작** 에서 **시작** 을 선택합니다.
-1. **IdFix 개인정보처리방침** 대화 상자에서 고지 사항을 검토한 다음 **확인** 을 선택합니다.
+1. **Github** 페이지의 **ClickOnce 시작** 에서 **시작을** 선택합니다.
+1. **IdFix 개인정보처리방침** 대화 상자에서 고지 사항을 검토한 다음 **확인을** 선택합니다.
 
 #### <a name="task-2-run-idfix"></a>작업 2: IdFix 실행
 
-1. **IdFix** 창에서 **쿼리** 를 선택합니다.
+1. **IdFix** 창에서 **쿼리를** 선택합니다.
 1. 온-프레미스 Active Directory의 개체 목록을 검토하고 **ERROR** 및 **ATTRIBUTE** 열을 검토합니다. 이 시나리오는 **ContosoAdmin** 의 **displayName** 값이 비어 있으며, 도구에서 권장하는 새 값이 **UPDATE** 열에 나타납니다.
-1. **IdFix** 창의 **작업** 드롭다운 메뉴에서 **편집** 을 선택한 다음 **적용** 을 선택하여 권장 변경 내용을 자동으로 구현합니다.
-1. **보류 적용** 대화 상자에서 **예** 를 선택하고 IdFix 도구를 닫습니다.
+1. **IdFix** 창의 **작업** 드롭다운 메뉴에서 **편집** 을 선택한 다음 **적용을** 선택하여 권장 변경 내용을 자동으로 구현합니다.
+1. **보류 적용** 대화 상자에서 **예를** 선택하고 IdFix 도구를 닫습니다.
 
 ## <a name="exercise-3-downloading-installing-and-configuring-azure-ad-connect"></a>연습 3: Azure AD Connect 다운로드, 설치 및 구성
 
@@ -126,10 +126,10 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-1-install-and-configure-azure-ad-connect"></a>작업 1: Azure AD Connect 설치 및 구성
 
 1. **SEA-ADM1** 의 Azure Portal이 표시된 Microsoft Edge 창의 **Azure Active Directory** 에서 **Azure AD Connect** 페이지로 이동합니다.
-1. **Microsoft Azure Active Directory Connect** 페이지에서 **다운로드** 를 선택합니다.
+1. **Microsoft Azure Active Directory Connect** 페이지에서 **다운로드를** 선택합니다.
 1. Azure AD Connect 설치 이진 파일을 다운로드하고 설치를 시작합니다.
-1. **Microsoft Azure Active Directory Connect** 페이지에서 **사용 조건 및 개인정보처리방침에 동의** 확인란을 선택한 다음 **계속** 을 선택합니다.
-1. **Express 설정** 페이지에서 **기본 설정 사용** 을 선택합니다.
+1. **Microsoft Azure Active Directory Connect** 페이지에서 **사용 조건 및 개인정보처리방침에 동의** 확인란을 선택한 다음 **계속을** 을 선택합니다.
+1. **Express 설정** 페이지에서 **기본 설정 사용을** 선택합니다.
 1. **Azure AD에 연결** 페이지에서, 연습 1에서 만든 Azure AD 전역 관리자 사용자 계정의 사용자 이름과 암호를 입력합니다.
 1. **AD DS에 연결** 페이지에서 다음 자격 증명을 입력합니다.
 
@@ -140,7 +140,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
    > **참고**: 제공된 도메인 이름은 확인된 도메인일 필요가 없습니다. 일반적으로는 Azure AD Connect 설치 전에 도메인을 확인하겠지만 이 랩에서는 이 확인 단계가 필요 없습니다.
 
-1. **모든 UPN 접미사를 확인된 도메인에 일치시키지 않고 계속** 을 선택합니다.
+1. **모든 UPN 접미사를 확인된 도메인에 일치시키지 않고 계속을** 선택합니다.
 1. **구성 준비** 페이지에 도달한 이후 작업 목록을 검토하고 설치를 시작합니다.
 
 ## <a name="exercise-4-verifying-integration-between-ad-ds-and-azure-ad"></a>연습 4: AD DS와 Azure AD 간의 통합 확인
@@ -182,10 +182,10 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 #### <a name="task-3-update-a-user-account-in-active-directory"></a>작업 3: Active Directory에서 사용자 계정 업데이트
 
-1. **SEA-ADM1** 의 **서버 관리자** 에서 **Active Directory 사용자 및 컴퓨터** 를 엽니다.
-1. **Active Directory 사용자 및 컴퓨터** 에서 **영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
+1. **SEA-ADM1** 의 **서버 관리자** 에서 **Active Directory 사용자 및 컴퓨터를** 엽니다.
+1. **Active Directory 사용자 및 컴퓨터에서****영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
 1. 사용자의 속성에서 **조직** 탭을 선택합니다.
-1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인** 을 선택합니다.
+1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인을** 선택합니다.
 
 #### <a name="task-4-create-a-user-account-in-active-directory"></a>작업 4: Active Directory에서 사용자 계정 만들기
 
@@ -243,10 +243,10 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-2-enable-password-writeback-in-azure-ad-connect"></a>작업 2: Azure AD Connect에서 암호 쓰기 저장을 사용하도록 설정
 
 1. **SEA-ADM1** 에서 **Azure AD Connect** 를 엽니다.
-1. **Microsoft Azure Active Directory Connect** 창에서 **구성** 을 선택합니다.
+1. **Microsoft Azure Active Directory Connect** 창에서 **구성을** 선택합니다.
 1. **추가 작업** 페이지에서 **동기화 옵션 사용자 지정** 을 선택합니다.
 1. **Azure AD에 연결** 페이지에서, 연습 1에서 만든 Azure AD 전역 관리자 사용자 계정의 사용자 이름과 암호를 입력합니다.
-1. **선택적 기능** 페이지에서 **암호 쓰기 저장** 을 선택합니다.
+1. **선택적 기능** 페이지에서 **암호 쓰기 저장을** 선택합니다.
 
    > **참고**: Active Directory 사용자의 셀프 서비스 암호 재설정에는 암호 쓰기 저장이 필요합니다. 이렇게 하면 Azure AD의 사용자가 변경한 암호를 Active Directory와 동기화할 수 있습니다.
 
@@ -256,12 +256,12 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-3-enable-pass-through-authentication-in-azure-ad-connect"></a>작업 3: Azure AD Connect에서 통과 인증을 사용하도록 설정
 
 1. **SEA-ADM1** 의 **시작** 메뉴에서 **Azure AD Connect** 를 확장한 다음 **Azure AD Connect** 를 선택합니다.
-1. **Microsoft Azure Active Directory Connect** 창에서 **구성** 을 선택합니다.
-1. **추가 작업** 페이지에서 **사용자 로그인 변경** 을 선택합니다.
+1. **Microsoft Azure Active Directory Connect** 창에서 **구성을** 선택합니다.
+1. **추가 작업** 페이지에서 **사용자 로그인 변경을** 선택합니다.
 1. **Azure AD에 연결** 페이지에서, 연습 1에서 만든 Azure AD 전역 관리자 사용자 계정의 사용자 이름과 암호를 입력합니다.
-1. **사용자 로그인** 페이지에서 **통과 인증** 을 선택합니다.
+1. **사용자 로그인** 페이지에서 **통과 인증을** 선택합니다.
 1. **Single Sign-On 사용** 확인란이 선택되어 있는지 확인합니다.
-1. **Single Sign-On 사용** 페이지에서 **자격 증명 입력** 을 선택합니다.
+1. **Single Sign-On 사용** 페이지에서 **자격 증명 입력을** 선택합니다.
 1. **포리스트 자격 증명** 대화 상자에서 다음 자격 증명을 사용하여 인증합니다.
 
    - 사용자 이름: **Administrator**
@@ -275,7 +275,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 1. **SEA-ADM1** 의 Azure Portal **Azure Active Directory** 페이지에서 **Azure AD Connect** 페이지로 이동합니다.
 1. **Azure AD Connect** 페이지에서 **사용자 로그인** 아래의 정보를 검토합니다.
-1. **사용자 로그인** 에서 **Seamless Single Sign-On** 을 선택합니다.
+1. **사용자 로그인에서****Seamless Single Sign-On** 을 선택합니다.
 1. **Seamless Single Sign-On** 페이지에서 온-프레미스 도메인 이름을 검토합니다.
 1. **Seamless Single Sign-On** 페이지에서 **통과 인증** 페이지로 이동합니다.
 1. **통과 인증** 페이지에서 **인증 에이전트** 아래의 서버 목록을 검토합니다.
@@ -284,7 +284,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 #### <a name="task-5-install-and-register-the-azure-ad-password-protection-proxy-service-and-dc-agent"></a>작업 5: Azure AD 암호 보호 프록시 서비스 및 DC 에이전트 설치 및 등록
 
-1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 Microsoft 다운로드 웹 사이트로 이동하여 설치 관리자를 다운로드할 수 있는 **Windows Server Active Directory용 Azure AD 암호 보호** 페이지로 이동한 다음 **다운로드** 를 선택합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 Microsoft 다운로드 웹 사이트로 이동하여 설치 관리자를 다운로드할 수 있는 **Windows Server Active Directory용 Azure AD 암호 보호** 페이지로 이동한 다음 **다운로드를** 선택합니다.
 1. **AzureADPasswordProtectionProxySetup.exe** 및 **AzureADPasswordProtectionDCAgentSetup.msi** 파일을 **SEA-ADM1** 에 다운로드합니다.
 
    > **참고**: 도메인 컨트롤러가 아닌 서버에 프록시 서비스를 설치하는 것이 좋습니다. 또한 프록시 서비스는 Azure AD Connect 에이전트와 동일한 서버에 설치하면 안 됩니다. **SEA-SVR1** 에 프록시 서비스를 설치하고 **SEA-DC1** 의 암호 보호 DC 에이전트를 설치합니다.
@@ -352,7 +352,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge 창으로 전환하고 **Azure Active Directory** 페이지로 돌아간 다음 **보안** 페이지로 이동합니다.
 1. **보안** 페이지에서 **인증 방법** 을 선택합니다.
 1. **인증 방법** 페이지에서 **암호 보호** 를 선택합니다.
-1. **암호 보호** 페이지에서 **사용자 지정 목록 적용** 을 사용하도록 설정합니다.
+1. **암호 보호** 페이지에서 **사용자 지정 목록 적용을** 사용하도록 설정합니다.
 1. **사용자 지정 금지 암호 목록** 텍스트 상자에 다음 단어(줄당 하나씩)를 입력합니다.
  
    - **Contoso**

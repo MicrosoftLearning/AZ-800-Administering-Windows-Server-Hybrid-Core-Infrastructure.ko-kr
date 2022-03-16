@@ -6,7 +6,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/28/2022
 ms.locfileid: "137907012"
 ---
-# <a name="az-800t00-administering-windows-server-hybrid-core-infrastructure"></a>AZ-800T00: Administering Windows Server Hybrid Core Infrastructure
+# <a name="az-800t00-administering-windows-server-hybrid-core-infrastructure"></a>AZ-800T00: Windows Server 하이브리드 코어 인프라 관리
 
 - **[최신 학생 핸드북 및 AllFiles 콘텐츠 다운로드](../../releases/latest)**
 - **MCT이신가요?** - [MCT를 위한 GitHub 사용자 가이드](https://microsoftlearning.github.io/MCT-User-Guide/)를 살펴보세요.
