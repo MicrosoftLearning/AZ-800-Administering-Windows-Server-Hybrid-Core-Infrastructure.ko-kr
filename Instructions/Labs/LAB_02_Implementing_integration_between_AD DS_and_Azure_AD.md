@@ -13,7 +13,7 @@ ms.locfileid: "137907053"
 
 ## <a name="scenario"></a>시나리오
 
-Azure 리소스에 대한 액세스를 인증하고 권한을 부여하도록 Azure AD(Microsoft Azure Active Directory)를 사용하는 데 따른 관리 및 모니터링 오버헤드 관련 문제를 해결하기 위해 온-프레미스 AD DS(Active Directory Domain Services)와 Azure AD 간의 통합을 테스트하고 온-프레미스와 클라우드 리소스를 혼합하여 사용함으로써 여러 사용자 계정을 관리하는 것에 관한 비즈니스 문제가 해결되는지 확인합니다.
+Azure 리소스에 대한 액세스를 인증하고 권한을 부여하도록 Microsoft Azure AD(Microsoft Azure Active Directory)를 사용하는 데 따른 관리 및 모니터링 오버헤드 관련 문제를 해결하기 위해 온-프레미스 AD DS(Active Directory Domain Services)와 Azure AD 간의 통합을 테스트하고 온-프레미스와 클라우드 리소스를 혼합하여 사용함으로써 여러 사용자 계정을 관리하는 것에 관한 비즈니스 문제가 해결되는지 확인합니다.
 
 또한 접근 방식이 정보 보안 팀의 문제를 해결하고 로그인 시간 및 암호 정책과 같은 Active Directory 사용자에게 적용된 기존 제어를 유지하는지 확인하고자 합니다. 마지막으로, 온-프레미스 Active Directory 보안을 더욱 강화하고 관리 오버헤드를 최소화할 수 있는 Azure AD 통합 기능을 식별하려고 합니다. 여기에는 Windows Server Active Directory에 대한 Azure AD 암호 보호 및 암호 쓰기 저장을 사용한 SSPR(셀프 서비스 암호 재설정)이 포함됩니다.
 
@@ -110,7 +110,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 1. **IdFix** 창에서 **쿼리를** 선택합니다.
 1. 온-프레미스 Active Directory의 개체 목록을 검토하고 **ERROR** 및 **ATTRIBUTE** 열을 검토합니다. 이 시나리오는 **ContosoAdmin** 의 **displayName** 값이 비어 있으며, 도구에서 권장하는 새 값이 **UPDATE** 열에 나타납니다.
-1. **IdFix** 창의 **작업** 드롭다운 메뉴에서 **편집** 을 선택한 다음 **적용을** 선택하여 권장 변경 내용을 자동으로 구현합니다.
+1. **IdFix** 창의 **작업** 드롭다운 메뉴에서 **편집을** 선택한 다음 **적용을** 선택하여 권장 변경 내용을 자동으로 구현합니다.
 1. **보류 적용** 대화 상자에서 **예를** 선택하고 IdFix 도구를 닫습니다.
 
 ## <a name="exercise-3-downloading-installing-and-configuring-azure-ad-connect"></a>연습 3: Azure AD Connect 다운로드, 설치 및 구성
@@ -172,7 +172,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 #### <a name="task-2-verify-synchronization-in-the-synchronization-service-manager"></a>작업 2: Synchronization Service Manager에서 동기화 확인
 
-1. **SEA-ADM1** 의 **시작** 메뉴에서 **Azure AD Connect** 를 확장한 다음 **동기화 서비스** 를 선택합니다.
+1. **SEA-ADM1** 의 **시작** 메뉴에서 **Azure AD Connect** 를 확장한 다음 **동기화 서비스를** 선택합니다.
 1. **Synchronization Service Manager** 창의 **작업** 탭 아래에서 Active Directory 개체를 동기화하기 위해 수행된 작업을 검토합니다.
 1. **커넥터** 탭을 선택하고 두 커넥터를 메모합니다.
 
@@ -183,7 +183,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-3-update-a-user-account-in-active-directory"></a>작업 3: Active Directory에서 사용자 계정 업데이트
 
 1. **SEA-ADM1** 의 **서버 관리자** 에서 **Active Directory 사용자 및 컴퓨터를** 엽니다.
-1. **Active Directory 사용자 및 컴퓨터에서****영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
+1. **Active Directory 사용자 및 컴퓨터에서** **영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
 1. 사용자의 속성에서 **조직** 탭을 선택합니다.
 1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인을** 선택합니다.
 
@@ -244,13 +244,13 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 1. **SEA-ADM1** 에서 **Azure AD Connect** 를 엽니다.
 1. **Microsoft Azure Active Directory Connect** 창에서 **구성을** 선택합니다.
-1. **추가 작업** 페이지에서 **동기화 옵션 사용자 지정** 을 선택합니다.
+1. **추가 작업** 페이지에서 **동기화 옵션 사용자 지정을** 선택합니다.
 1. **Azure AD에 연결** 페이지에서, 연습 1에서 만든 Azure AD 전역 관리자 사용자 계정의 사용자 이름과 암호를 입력합니다.
 1. **선택적 기능** 페이지에서 **암호 쓰기 저장을** 선택합니다.
 
    > **참고**: Active Directory 사용자의 셀프 서비스 암호 재설정에는 암호 쓰기 저장이 필요합니다. 이렇게 하면 Azure AD의 사용자가 변경한 암호를 Active Directory와 동기화할 수 있습니다.
 
-1. **구성 준비 완료** 페이지에서 수행할 작업 목록을 검토한 다음 **구성** 을 선택합니다.
+1. **구성 준비 완료** 페이지에서 수행할 작업 목록을 검토한 다음 **구성을** 선택합니다.
 1. 구성이 완료되면 **Microsoft Azure Active Directory Connect** 창을 닫습니다.
 
 #### <a name="task-3-enable-pass-through-authentication-in-azure-ad-connect"></a>작업 3: Azure AD Connect에서 통과 인증을 사용하도록 설정
@@ -268,14 +268,14 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
    - 암호: **Pa55w.rd**
 
 1. **Single Sign-On 사용** 페이지에서 **자격 증명 입력** 옆에 녹색 확인 표시가 있는지 확인합니다.
-1. **구성 준비 완료** 페이지에서 수행할 작업 목록을 검토한 다음 **구성** 을 선택합니다.
+1. **구성 준비 완료** 페이지에서 수행할 작업 목록을 검토한 다음 **구성을** 선택합니다.
 1. 구성이 완료되면 **Microsoft Azure Active Directory Connect** 창을 닫습니다.
 
 #### <a name="task-4-verify-pass-through-authentication-in-azure"></a>작업 4: Azure에서 통과 인증 확인
 
 1. **SEA-ADM1** 의 Azure Portal **Azure Active Directory** 페이지에서 **Azure AD Connect** 페이지로 이동합니다.
 1. **Azure AD Connect** 페이지에서 **사용자 로그인** 아래의 정보를 검토합니다.
-1. **사용자 로그인에서****Seamless Single Sign-On** 을 선택합니다.
+1. 사용자 **로그인에서** **Seamless Single Sign-On** 을 선택합니다.
 1. **Seamless Single Sign-On** 페이지에서 온-프레미스 도메인 이름을 검토합니다.
 1. **Seamless Single Sign-On** 페이지에서 **통과 인증** 페이지로 이동합니다.
 1. **통과 인증** 페이지에서 **인증 에이전트** 아래의 서버 목록을 검토합니다.
@@ -316,7 +316,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
    Get-Service -Computer SEA-DC1 -Name AzureADPasswordProtectionDCAgent | fl
    ```
 
-   > **참고**: 각 서비스 상태가 **실행** 인지 확인합니다.
+   > **참고**: 각 서비스 상태가 **실행인지** 확인합니다.
 
 1. 다음 명령을 실행하여 **SEA-SVR1** 에 대한 PowerShell 원격 세션을 시작합니다.
 
@@ -350,7 +350,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 #### <a name="task-6-enable-password-protection-in-azure"></a>작업 6: Azure에서 암호 보호를 사용하도록 설정
 
 1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge 창으로 전환하고 **Azure Active Directory** 페이지로 돌아간 다음 **보안** 페이지로 이동합니다.
-1. **보안** 페이지에서 **인증 방법** 을 선택합니다.
+1. **보안** 페이지에서 **인증 방법을** 선택합니다.
 1. **인증 방법** 페이지에서 **암호 보호** 를 선택합니다.
 1. **암호 보호** 페이지에서 **사용자 지정 목록 적용을** 사용하도록 설정합니다.
 1. **사용자 지정 금지 암호 목록** 텍스트 상자에 다음 단어(줄당 하나씩)를 입력합니다.
@@ -361,7 +361,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
    > **참고**: 금지된 암호 목록은 조직과 관련된 단어여야 합니다.
 
 1. **Windows Server Active Directory에서 암호 보호 사용** 설정이 활성화되어 있는지 확인합니다. 
-1. **모드** 가 **감사** 로 설정되어 있는지 확인하고 변경 내용을 저장합니다.
+1. **모드가****감사로** 설정되어 있는지 확인하고 변경 내용을 저장합니다.
 
 ## <a name="exercise-6-cleaning-up"></a>연습 6: 정리
 
@@ -376,7 +376,7 @@ Azure AD 환경이 온-프레미스 AD DS와 통합할 준비가 되었는지 �
 
 #### <a name="task-1-uninstall-azure-ad-connect"></a>작업 1: Azure AD Connect 제거
 
-1. **SEA-ADM1** 에서 **제어판** 을 엽니다.
+1. **SEA-ADM1** 에서 **제어판을** 엽니다.
 1. **프로그램 제거 또는 변경** 기능을 사용하여 **Microsoft Azure AD Connect** 를 제거합니다.
 
 #### <a name="task-2-disable-directory-synchronization-in-azure"></a>작업 2: Azure에서 디렉터리 동기화를 사용하지 않도록 설정
