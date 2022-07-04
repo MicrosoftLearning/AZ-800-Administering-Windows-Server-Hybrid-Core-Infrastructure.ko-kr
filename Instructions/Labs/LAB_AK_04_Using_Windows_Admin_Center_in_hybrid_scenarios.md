@@ -3,12 +3,12 @@ lab:
   title: '랩: 하이브리드 시나리오에서 Windows Admin Center 사용'
   type: Answer Key
   module: 'Module 4: Facilitating hybrid management'
-ms.openlocfilehash: bbdbcae39ff3756d24061a0bf4e4df2aaf7d4c0a
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: b7f4d58c81945aae9c79d4cee0197f2fd1f1a407
+ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906987"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "144813035"
 ---
 # <a name="lab-answer-key-using-windows-admin-center-in-hybrid-scenarios"></a>랩 정답 키: 하이브리드 시나리오에서 Windows Admin Center 사용
 
@@ -17,7 +17,7 @@ ms.locfileid: "137906987"
 #### <a name="task-1-create-an-azure-resource-group-by-using-an-azure-resource-manager-template"></a>작업 1: Azure Resource Manager 템플릿을 사용하여 Azure 리소스 그룹 만들기
 
 1. **SEA-ADM1** 에 연결하고, 필요한 경우 **Pa55w.rd** 암호를 사용해 **CONTOSO\\Administrator** 로 로그인합니다.
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 Owner 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 소유자 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
 1. Azure Portal에서 검색 텍스트 상자 바로 옆의 도구 모음 아이콘을 선택하여 Cloud Shell 창을 엽니다.
 1. **Bash** 와 **PowerShell** 중에서 선택하라는 메시지가 표시되면 **PowerShell** 을 선택합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "137906987"
    ```powershell
    Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
    ```
-1. 다음 명령을 입력한 다음 Enter 키를 눌러 Windows Admin Center를 설치합니다.
+1. 다음 명령을 입력한 후 Enter 키를 눌러 Windows Admin Center를 설치합니다.
     
    ```powershell
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
@@ -104,12 +104,12 @@ ms.locfileid: "137906987"
 
    >**참고**: Microsoft Edge 창에 **코드 입력** 페이지가 표시되는 다른 탭이 열립니다.
 
-1. **코드 입력** 텍스트 상자에서 복사한 코드를 클립보드에 붙여넣고 **다음** 을 선택합니다.
-1. **로그인** 페이지에 이전 연습에서 Azure 구독에 로그인하는 데 사용한 것과 동일한 사용자 이름을 제공하고, **다음** 을 선택하고, 해당 암호를 입력한 다음 **로그인** 을 선택합니다.
+1. **코드 입력** 텍스트 상자에서 복사한 코드를 클립보드에 붙여넣은 후 **다음** 을 선택합니다.
+1. **로그인** 페이지에 이전 연습에서 Azure 구독에 로그인하는 데 사용한 것과 같은 사용자 이름을 입력하고 **다음** 을 선택한 후 해당 암호를 입력하고 **로그인** 을 선택합니다.
 1. **Windows Admin Center에 로그인하시겠습니까?** 라는 메시지가 표시되면 **계속** 을 선택합니다.
 1. Windows Admin Center에서 로그인이 성공했는지 확인하고 Microsoft Edge 창에 새로 열린 탭을 닫습니다.
 1. Windows Admin Center에서 Azure 시작 창에서 **Azure Active Directory 애플리케이션** 이 **새로 만들기** 로 설정되어 있는지 확인하고 **연결** 을 선택합니다.
-1. 등록 절차의 단계 목록에서 **로그인** 을 선택합니다. 그러면 **요청된 권한** 이라는 팝업 창이 열립니다.
+1. 등록 절차의 단계 목록에서 **로그인** 을 선택합니다. 그러면 **요청된 권한** 이라는 레이블이 지정된 팝업 창이 열립니다.
 1. **요청된 권한** 팝업 창에서 **조직 대신 동의** 를 선택한 다음 **수락** 을 선택합니다.
 
 #### <a name="task-2-create-an-azure-network-adapter"></a>작업 2: Azure 네트워크 어댑터 만들기
@@ -168,6 +168,7 @@ ms.locfileid: "137906987"
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
+     PublicIPAddressName = $pipname
    }
    ```
 

@@ -3,12 +3,12 @@ lab:
   title: '랩: AD DS와 Azure AD 간의 통합 구현'
   type: Answer Key
   module: 'Module 2: Implementing Identity in Hybrid Scenarios'
-ms.openlocfilehash: 8cbcc563a86ca5c1c997a69884e1b132cbf2f86e
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 7defc132d092b6db2286718a9bfd5ce619c7b632
+ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906994"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "144813026"
 ---
 # <a name="lab-implementing-integration-between-ad-ds-and-azure-ad"></a>랩: AD DS와 Azure AD 간의 통합 구현
 
@@ -125,7 +125,7 @@ ms.locfileid: "137906994"
 1. **SEA-ADM1** 의 서버 관리자에 있는 **도구** 메뉴에서 **Active Directory 사용자 및 컴퓨터** 를 선택합니다.
 1. **Active Directory 사용자 및 컴퓨터** 에서 **영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
 1. 사용자의 속성에서 **조직** 탭을 선택합니다.
-1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인** 을 선택합니다.
+1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인을** 선택합니다.
 
 #### <a name="task-4-create-a-user-account-in-active-directory"></a>작업 4: Active Directory에서 사용자 계정 만들기
 
@@ -248,7 +248,7 @@ ms.locfileid: "137906994"
 
    ```powershell
    New-Item -Type Directory -Path '\\SEA-SVR1.contoso.com\C$\Temp' -Force
-   Copy-Item -Path "$env:USERPROFILE\Downloads\AzureADPasswordProtectionProxySetup.msi" -Destination '\\SEA-SVR1.contoso.com\C$\Temp\'
+   Copy-Item -Path "$env:USERPROFILE\Downloads\AzureADPasswordProtectionProxySetup.exe" -Destination '\\SEA-SVR1.contoso.com\C$\Temp\'
    Invoke-Command -ComputerName SEA-SVR1.contoso.com -ScriptBlock { Start-Process -FilePath C:\Temp\AzureADPasswordProtectionProxySetup.msi -ArgumentList '/quiet /log C:\Temp\AzureADPPProxyInstall.log' -Wait }
    ```
 1. 다음 명령을 실행하여 **SEA-DC1** 에서 **C:\Temp** 디렉터리를 만들고 **AzureADPasswordProtectionDCAgentSetup.msi** 설치 관리자를 해당 디렉터리에 복사하고, 설치를 호출한 다음 설치 완료 후 도메인 컨트롤러를 다시 시작합니다.
