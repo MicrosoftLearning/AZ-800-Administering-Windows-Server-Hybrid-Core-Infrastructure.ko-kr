@@ -3,12 +3,12 @@ lab:
   title: '랩: Windows Server에서 가상화 구현 및 구성'
   type: Answer Key
   module: 'Module 5: Hyper-V virtualization in Windows Server'
-ms.openlocfilehash: 9202bf8b30582e0c3d8aebfddf7ca0762f53024a
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 9d245ed491ca11a2513ba5bc61627331324aab99
+ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906982"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "144813034"
 ---
 # <a name="lab-answer-key-implementing-and-configuring-virtualization-in-windows-server"></a>랩 응답 키: Windows Server에서 가상화 구현 및 구성
 
@@ -20,7 +20,7 @@ ms.locfileid: "137906982"
 1. **SEA-ADM1** 에서 **시작을** 선택한 다음 **서버 관리자** 를 선택합니다.
 1. 서버 관리자에서 **모든 서버** 를 선택합니다.
 1. 서버 목록에서 **SEA-SVR1** 항목을 선택하고 상황에 맞는 메뉴를 표시한 다음 **Hyper-V 관리자** 를 선택합니다.
-1. Hyper-V 관리자에서 **SEA-SVR1.Contoso.com** 이 입력된 선택 상자인지 확인합니다.
+1. Hyper-V 관리자에서 **SEA-SVR1.Contoso.com** 이 선택된 Hyper-V 서버인지 확인합니다.
 1. 작업 창에서 **가상 스위치 관리자** 를 선택합니다.
 1. **가상 스위치 관리자** 의 **가상 스위치 만들기** 창에서 **프라이빗** 을 선택한 다음 **가상 스위치 만들기** 를 선택합니다.
 1. **가상 스위치 속성** 상자에서 다음 설정을 지정한 다음 **확인** 을 선택합니다.
@@ -77,7 +77,7 @@ ms.locfileid: "137906982"
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
    ```
 
-   > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
+   > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다. 웹 페이지가 응답하지 않으면 **services.msc** 를 열고 Windows Admin Center 서버가 **시작됨** 인지 확인합니다.
 
 1. **SEA-ADM1** 에서 Microsoft Edge를 시작한 다음 `https://SEA-ADM1.contoso.com`으로 이동합니다. 
 1. 메시지가 표시되면 **Windows 보안** 대화 상자에 다음 자격 증명을 입력한 다음 **확인** 을 선택합니다.
@@ -175,7 +175,7 @@ ms.locfileid: "137906982"
 1. 다음 명령을 입력한 다음 Enter 키를 눌러 온라인 Microsoft 리포지토리의 Docker 기본 이미지를 나열합니다.
 
    ```powershell
-   docker search Microsoft
+   docker search microsoft
    ```
 1. 다음 명령을 입력한 다음 Enter 키를 눌러 IIS(Internet Information Services) 설치가 포함된 Nano 서버 이미지를 다운로드합니다.
 

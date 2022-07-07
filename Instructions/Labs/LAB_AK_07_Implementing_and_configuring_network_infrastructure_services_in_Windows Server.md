@@ -3,12 +3,12 @@ lab:
   title: '랩: Windows Server에서 네트워크 인프라 서비스 구현 및 구성'
   type: Answer Key
   module: 'Module 7: Network Infrastructure services in Windows Server'
-ms.openlocfilehash: b07da01785e12c2d025ba76fa3e712fdd35b781a
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 1cac073eaffb0c24b73dc4e2731d89e2a143e568
+ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907045"
+ms.lasthandoff: 05/07/2022
+ms.locfileid: "144813029"
 ---
 # <a name="lab-answer-key-implementing-and-configuring-network-infrastructure-services-in-windows-server"></a>랩 정답 키: Windows Server에서 네트워크 인프라 서비스 구현 및 구성
 
@@ -26,7 +26,7 @@ ms.locfileid: "137907045"
    ```powershell
    Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
    ```
-1. 다음 명령을 입력한 다음 Enter 키를 눌러 Windows Admin Center를 설치합니다.
+1. 다음 명령을 입력한 후 Enter 키를 눌러 Windows Admin Center를 설치합니다.
     
    ```powershell
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
@@ -76,6 +76,9 @@ ms.locfileid: "137907045"
 #### <a name="task-3-create-a-scope"></a>작업 3: 범위 만들기
 
 1. **SEA-ADM1** 에서 **SEA-SVR1** 의 **DHCP** 설정이 표시된 Microsoft Edge 창에서 Windows Admin Center로 전환합니다.
+
+   > **참고**: DHCP 옵션이 메뉴에 표시되는 데 몇 분 정도 걸릴 수 있습니다. 필요한 경우 sea-svr1에 대한 연결을 새로 고칩니다. DHCP Powershell 도구를 설치하라는 메시지가 표시되면 **설치** 를 선택합니다.
+
 1. **DHCP** 페이지에서 **+ 새 범위** 를 선택합니다.
 1. 새 범위 만들기 창에서 다음 설정을 지정한 다음 **만들기** 를 선택합니다.
 
@@ -135,7 +138,7 @@ ms.locfileid: "137907045"
 1. **이더넷 속성** 대화 상자에서 **Internet Protocol Version 4(TCP/IPv4)** 를 선택한 다음 **속성** 을 선택합니다.
 1. **Internet Protocol Version 4(TCP/IPv4) 속성** 대화 상자에서 **자동으로 IP 주소 가져오기** 를 선택하고 **자동으로 DNS 서버 주소 가져오기** 를 선택한 다음 **확인** 을 선택합니다.
 1. **닫기** 를 선택한 다음, **이더넷 상태** 창에서 **세부 정보** 를 선택합니다.
-1. **네트워크 연결 세부 정보** 대화 상자에서 DHCP가 활성화되었는지, IP 주소를 얻었는지, **SEA-SVR2(172.16.10.12)** DHCP 서버에서 임대를 발급했는지 확인합니다.
+1. **네트워크 연결 세부 정보** 대화 상자에서 DHCP가 활성화되었는지, IP 주소를 얻었는지, **SEA-SVR1(172.16.10.12)** DHCP 서버에서 임대를 발급했는지 확인합니다.
 1. **닫기** 를 선택하여 **이더넷 상태** 창으로 돌아갑니다.
 1. **SEA-ADM1** 의 **DHCP** 창에서 **172.16.10.12** 노드를 확장하고, **IPv4** 노드를 확장하고, **범위 [172.16.0.0] Contoso** 노드를 확장한 다음 **주소 임대** 를 선택합니다.
 1. **SEA-ADM1.contoso.com** 임대를 나타내는 항목이 있는지 확인합니다.
