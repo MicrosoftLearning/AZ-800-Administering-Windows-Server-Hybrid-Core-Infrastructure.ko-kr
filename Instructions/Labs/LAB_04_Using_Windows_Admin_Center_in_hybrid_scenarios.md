@@ -121,7 +121,7 @@ ms.locfileid: "137907024"
 
    > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
 
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다. 
+1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다. 
 
    >**참고**: 링크가 작동하지 않는다면 **SEA-ADM1** 에서 **WindowsAdminCenter.msi** 파일로 이동하여 상황에 맞는 메뉴를 연 다음 **복구** 를 선택하세요. 복구가 완료되면 Microsoft Edge를 새로 고칩니다. 
 
@@ -283,7 +283,7 @@ Azure 관련 요금을 최소화하기 위해 이 랩 전체에서 프로비전�
 
 #### <a name="task-1-start-a-powershell-session-in-cloud-shell"></a>작업 1: Cloud Shell에서 PowerShell 세션 시작
 
-1. **SEA-ADM1** 에서 Azure Portal이 표시된 Microsoft Edge를 창으로 전환합니다.
+1. **SEA-ADM1** 에서 Azure Portal이 표시된 Microsoft Edge 창으로 전환합니다.
 1. Azure Portal의 Cloud Shell 창에서 PowerShell 세션을 엽니다.
 
 #### <a name="task-2-identify-all-azure-resources-provisioned-in-the-lab"></a>작업 2: 랩에서 프로비전한 모든 Azure 리소스 식별
