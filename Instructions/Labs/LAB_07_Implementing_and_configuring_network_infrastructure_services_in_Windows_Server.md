@@ -2,12 +2,12 @@
 lab:
   title: '랩: Windows Server에서 네트워크 인프라 서비스 구현 및 구성'
   module: 'Module 7: Network Infrastructure services in Windows Server'
-ms.openlocfilehash: 3d4a37155a7609316235b4ec8c4fcb8360cfe2f7
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: d50ffa7e7dc2631ee6c955b27e8b3507479ee8c9
+ms.sourcegitcommit: 33fdeedf81ac2a39e09176f7a4b7a72b983a072f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907000"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742070"
 ---
 # <a name="lab-implementing-and-configuring-network-infrastructure-services-in-windows-server"></a>랩: Windows Server에서 네트워크 인프라 서비스 구현 및 구성
 
@@ -28,7 +28,7 @@ Contoso, Ltd.는 네트워크 서비스에 관한 복잡한 요구 사항이 있
 
 가상 머신: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1** 과 **AZ-800T00A-ADM1** 을 실행해야 합니다. 다른 VM을 실행할 수도 있지만 이 랩에서는 필요하지 않습니다.
 
-> **참고**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1** 및 **AZ-800T00A-SEA-ADM1** 가상 머신은 **SEA-DC1**, **SEA-SVR1** 및 **SEA-ADM1** 의 설치를 호스트합니다.
+> **참고**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1** 및 **AZ-800T00A-SEA-ADM1** 가상 머신은 **SEA-DC1**, **SEA-SVR1** 및 **SEA-ADM1** 의 설치를 호스팅합니다.
 
 1. **SEA-ADM1** 을 선택합니다.
 1. 다음 자격 증명을 사용하여 로그인합니다.
@@ -72,7 +72,7 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 
    > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
 
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 `https://SEA-ADM1.contoso.com`에 있는 Windows Admin Center의 로컬 인스턴스에 연결합니다.
 
    >**참고**: 링크가 작동하지 않는다면 **SEA-ADM1** 에서 **WindowsAdminCenter.msi** 파일로 이동하여 상황에 맞는 메뉴를 연 다음 **복구** 를 선택하세요. 복구가 완료되면 Microsoft Edge를 새로 고칩니다. 
    
@@ -129,9 +129,9 @@ Contoso의 Trey Research 하위 부서에는 사용자가 50여명에 불과한 
 ### <a name="task-5-verify-dhcp-functionality"></a>작업 5: DHCP 기능 확인
 
 1. **SEA-ADM1** 에서 IP 구성을 정적 할당에서 동적 할당으로 변경합니다.
-1. 결과 IP 구성을 검사하고 DHCP 임대를 **SEA-SVR2(172.16.10.12)** 에서 얻었는지 확인합니다.
+1. 결과 IP 구성을 검사하고 DHCP 임대를 **SEA-SVR1(172.16.10.12)** 에서 얻었는지 확인합니다.
 1. **SEA-ADM1** 의 **DHCP 관리 콘솔** 에서 두 DHCP 서버 모두에서 **Contoso** 범위에 **SEA-ADM1** 의 임대가 나열되는지 확인합니다.
-1. **SEA-ADM1** 에서 **DHCP 관리 콘솔** 을 사용하여 **SEA-SVR2(172.16.10.12)** 에서 **DHCP** 서비스를 중지합니다.
+1. **SEA-ADM1** 에서 **DHCP 관리 콘솔** 을 사용하여 **SEA-SVR1(172.16.10.12)** 에서 **DHCP** 서비스를 중지합니다.
 1. **SEA-ADM1** 에서 이더넷 네트워크 연결을 비활성화한 다음 다시 활성화하여 임대를 강제로 갱신합니다.
 1. **SEA-ADM1** 에서 동일한 DHCP 임대를 **SEA-DC1(172.16.10.10)** 에서 얻었는지 확인합니다.
 
