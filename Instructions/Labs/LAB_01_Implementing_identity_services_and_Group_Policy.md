@@ -2,12 +2,12 @@
 lab:
   title: '랩: ID 서비스 및 그룹 정책 구현'
   module: 'Module 1: Identity services in Windows Server'
-ms.openlocfilehash: 34c6259da5db4beca5e31998564c06102902ca48
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 62d1b1751656bfbed6f1096ff84b353f46f2f3da
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907051"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039400"
 ---
 # <a name="lab-implementing-identity-services-and-group-policy"></a>랩: ID 서비스 및 그룹 정책 구현
 
@@ -163,7 +163,7 @@ ms.locfileid: "137907051"
 1. GPO 설정 만들기 및 편집
 1. 클라이언트 컴퓨터에서 설정 적용 및 확인
 
-### <a name="task-1-create-and-edit-a-gpo"></a>작업 1: GPO 만들기 및 편집
+#### <a name="task-1-create-and-edit-a-gpo"></a>작업 1: GPO 만들기 및 편집
 
 1. **SEA-ADM1** 의 **서버 관리자** 에서 **그룹 정책 관리** 콘솔을 엽니다.
 1. **그룹 정책 개체** 컨테이너에 **Contoso Standards** 라는 GPO를 만듭니다.
@@ -172,11 +172,11 @@ ms.locfileid: "137907051"
 1. **User Configuration\Policies\Administrative Templates\Control Panel\Personalization** 폴더로 이동한 다음 **화면 보호기** 시간 제한 정책을 **600** 초로 구성합니다.
 1. **화면 보호기 암호로 보호** 정책 설정을 활성화하고 **그룹 정책 관리 편집기** 창을 닫습니다.
 
-### <a name="task-2-link-the-gpo"></a>작업 2: GPO 연결
+#### <a name="task-2-link-the-gpo"></a>작업 2: GPO 연결
 
   - **Contoso Standards** GPO를 `contoso.com` 도메인에 연결합니다.
 
-### <a name="task-3-review-the-effects-of-the-gpos-settings"></a>작업 3: GPO 설정의 효과 검토
+#### <a name="task-3-review-the-effects-of-the-gpos-settings"></a>작업 3: GPO 설정의 효과 검토
 
 1. **SEA-ADM1** 에서 **제어판** 을 엽니다.
 1. **Windows Defender 방화벽** 인터페이스를 사용하여 **원격 이벤트 로그 관리** 도메인 트래픽을 활성화합니다. 
@@ -190,7 +190,7 @@ ms.locfileid: "137907051"
 1. **SEA-ADM1** 의 **그룹 정책 관리** 콘솔에서 **Seattle** OU에 연결된 **Application Override** 라는 이름의 새 GPO를 만듭니다.
 1. **화면 보호기 시간 제한** 정책 설정이 비활성화되도록 구성한 다음 **그룹 정책 관리 편집기** 창을 닫습니다.
 
-### <a name="task-5-verify-the-order-of-precedence"></a>작업 5: 우선 순위 확인
+#### <a name="task-5-verify-the-order-of-precedence"></a>작업 5: 우선 순위 확인
 
 1. **SEA-ADM1** 의 **서버 관리자** 에서 **그룹 정책 관리** 콘솔을 엽니다.
 1. **그룹 정책 관리 콘솔** 트리에서 **Seattle** OU를 선택합니다.
@@ -198,12 +198,12 @@ ms.locfileid: "137907051"
 
    > **참고**: Seattle Application Override GPO는 CONTOSO Standards GPO보다 우선 순위가 높습니다. Seattle Application Override GPO에서 방금 구성한 화면 보호기 시간 제한 정책 설정은 CONTOSO Standards GPO의 설정 다음에 적용됩니다. 따라서 새 설정이 CONTOSO Standards GPO 설정을 덮어씁니다. Seattle Application Override GPO 범위 내의 사용자에 대해 화면 보호기 시간 제한은 사용하지 않도록 설정됩니다.
 
-### <a name="task-6-configure-the-scope-of-a-gpo-with-security-filtering"></a>작업 6: 보안 필터링을 사용하여 GPO 범위 구성
+#### <a name="task-6-configure-the-scope-of-a-gpo-with-security-filtering"></a>작업 6: 보안 필터링을 사용하여 GPO 범위 구성
 
 1. **SEA-ADM1** 의 **그룹 정책 관리** 콘솔에서 **Seattle Application Override** GPO를 선택합니다. **보안 필터링** 섹션에서 GPO가 기본적으로 인증된 사용자에게 적용됨을 알 수 있습니다.
 1. **보안 필터링** 섹션에서 먼저 **인증된 사용자** 를 제거한 다음 **SeattleBranchUsers** 그룹 및 **SEA-ADM1** 컴퓨터 계정을 추가합니다.
 
-### <a name="task-7-verify-the-application-of-settings"></a>작업 7: 설정 적용 확인
+#### <a name="task-7-verify-the-application-of-settings"></a>작업 7: 설정 적용 확인
 
 1. 그룹 정책 관리의 탐색 창에서 **그룹 정책 모델링** 을 선택합니다.
 1. **그룹 정책 모델링 마법사** 를 실행합니다.

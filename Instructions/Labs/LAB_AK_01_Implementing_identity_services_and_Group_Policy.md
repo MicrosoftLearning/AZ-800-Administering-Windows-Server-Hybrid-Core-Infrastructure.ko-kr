@@ -3,12 +3,12 @@ lab:
   title: '랩: ID 서비스 및 그룹 정책 구현'
   type: Answer Key
   module: 'Module 1: Identity services in Windows Server'
-ms.openlocfilehash: d68a50f3573f2817f4f83bc25cd69aba82e1d455
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: a0e12921f8971d31e92ba495134b22d3ed2b6895
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906993"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039442"
 ---
 # <a name="lab-answer-key-implementing-identity-services-and-group-policy"></a>랩 정답 키: ID 서비스 및 그룹 정책 구현
 
@@ -82,7 +82,7 @@ ms.locfileid: "137906993"
 
    > **참고**: **새로 고침** 을 선택해야 할 수도 있습니다.
 
-### <a name="task-3-manage-objects-in-ad-ds"></a>작업 3: AD DS에서 개체 관리
+#### <a name="task-3-manage-objects-in-ad-ds"></a>작업 3: AD DS에서 개체 관리
 
 1. **SEA-ADM1** 의 콘솔 세션에 연결되어 있는지 확인합니다.
 1. **Windows PowerShell(관리자)** 로 전환합니다.
