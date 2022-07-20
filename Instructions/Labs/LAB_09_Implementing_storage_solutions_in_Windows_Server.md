@@ -2,12 +2,12 @@
 lab:
   title: '랩: Windows Server에서 스토리지 솔루션 구현'
   module: 'Module 9: File servers and storage management in Windows Server'
-ms.openlocfilehash: 26aa54dc19222f7dd15dd5e64db939abdc8fada3
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 934803ee453372faa68572a289154e7c89f4b416
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907046"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039436"
 ---
 # <a name="lab-implementing-storage-solutions-in-windows-server"></a>랩: Windows Server에서 스토리지 솔루션 구현
 
@@ -143,7 +143,7 @@ Contoso, Ltd.에서는 스토리지 액세스를 간소화하고 스토리지 �
    Get-DedupMetadata –Volume M: |fl
    ```
 1. **SEA-ADM1** 의 **서버 관리자** 에서 디스크 창을 새로 고쳐 **M:** 볼륨의 속성을 표시합니다.
-1. **볼륨(M:\) 중복 제거 속성** 창에서 **중복 제거 비율** 및 **중복 제거 절감** 에 대한 값을 검토합니다.
+1. **볼륨(M:\\) 속성** 창에서 **중복 제거 비율** 및 **중복 제거 절감** 에 대한 값을 검토합니다.
 
 ## <a name="lab-exercise-2-configuring-iscsi-storage"></a>랩 연습 2: iSCSI 스토리지 구성
 

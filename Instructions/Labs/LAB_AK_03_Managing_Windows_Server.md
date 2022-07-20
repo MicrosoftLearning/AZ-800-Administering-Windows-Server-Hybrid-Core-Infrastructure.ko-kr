@@ -3,14 +3,14 @@ lab:
   title: '랩: Windows Server 관리'
   type: Answer Key
   module: 'Module 3: Windows Server administration'
-ms.openlocfilehash: 617789fc8fcaf6ef6019c2bb65de0f7366742eac
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 2a57ebb13406a063390a232275e354c167c6e494
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906990"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039445"
 ---
-# <a name="lab-managing-windows-server"></a>랩: Windows Server 관리
+# <a name="lab-answer-key-managing-windows-server"></a>랩 답변 키: Windows Server 관리
 
 ## <a name="exercise-1-implementing-and-using-remote-server-administration"></a>연습 1: 원격 서버 관리 구현 및 사용
 
@@ -30,6 +30,8 @@ ms.locfileid: "137906990"
    ```
 
    > **참고**: 설치가 완료될 때까지 기다리세요. 이 작업은 2분 정도 걸립니다.
+   
+   > **참고**: 설치가 완료되면 ‘ERR_Connection_Refused’ 오류 메시지가 표시될 수 있습니다. 이 경우 SEA-ADM1을 다시 시작하여 문제를 해결합니다.
 
 #### <a name="task-2-add-servers-for-remote-administration"></a>작업 2: 원격 관리를 위한 서버 추가
 
@@ -43,7 +45,7 @@ ms.locfileid: "137906990"
 1. **모든 연결** 페이지를 검토합니다. **sea-adm1.contoso.com** 항목이 포함되어 있는 것을 알 수 있습니다. 
 1. **모든 연결** 페이지에서 **+ 추가** 를 선택합니다. 
 1. 리소스 추가 또는 만들기 창의 **서버** 타일에서 **추가** 를 선택합니다.
-1. **서버 이름** 텍스트 상자에 **sea-svr1.contoso.com** 을 입력합니다.
+1. **서버 이름** 텍스트 상자에 **sea-dc1.contoso.com** 을 입력합니다.
 1. **이 연결에 다른 계정 사용** 옵션이 선택되어 있는지 확인하고 다음 자격 증명을 입력한 다음 **자격 증명을 사용하여 추가** 를 선택합니다.
 
    - 사용자 이름: **CONTOSO\\Administrator**
@@ -76,12 +78,12 @@ ms.locfileid: "137906990"
 
 1. **SEA-ADM1** 에서, Windows Admin Center의 왼쪽 창에 있는 **도구** 목록에서 **개요** 를 선택합니다. Windows Admin Center의 세부 정보 창에는 기본 서버 정보 및 성능 모니터링이 표시됩니다.
 1. 왼쪽 창의 **도구** 목록에서 아래로 스크롤하여 사용 가능한 기본 관리 도구를 검토합니다. **역할 및 기능** 을 선택하고 설치됨으로 나열된 역할 및 기능과 설치할 수 있는 역할 및 기능을 확인합니다. 아래로 스크롤하여 **텔넷 클라이언트** 확인란을 선택한 다음 창 맨 위에서 **+ 설치** 를 선택합니다.
-1. 역할 및 기능 설치 창에서 **예** 를 선택하고 텔넷 클라이언트가 성공적으로 설치되었음을 확인하는 메시지를 기다립니다.
+1. **역할 및 기능 설치** 창에서 **예** 를 선택하고 텔넷 클라이언트가 성공적으로 설치되었음을 확인하는 메시지를 기다립니다.
 1. 왼쪽 창 맨 아래에 있는 **도구** 목록 아래에서 **설정** 을 선택합니다.
 1. 오른쪽의 **설정** 섹션에서 **원격 데스크톱** 을 선택합니다.
 1. **원격 데스크톱** 섹션에서 **이 컴퓨터에 대한 원격 연결 허용** 확인란을 선택한 다음 **저장** 을 선택합니다.
 1. 왼쪽 창의 **도구** 목록에서 **원격 데스크톱** 을 선택합니다.
-1. 원격 데스크톱 창에서 **이 컴퓨터 연결에 대해 다시 묻지 않음** 확인란을 선택한 다음 **연결** 을 선택합니다.
+1. 원격 데스크톱 창에서 **이 컴퓨터에서 제공하는 인증서를 사용하여 자동으로 연결** 확인란을 선택한 다음 **연결** 을 선택합니다.
 1. 메시지가 표시되면 **확인** 을 선택한 다음 **연결** 을 선택합니다.
 1. Windows Admin Center 인터페이스 내에서 원격 데스크톱을 통해 **SEA-DC1** 에 성공적으로 연결되었는지 확인합니다.
 1. **연결 끊기** 를 선택합니다.

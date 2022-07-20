@@ -3,14 +3,14 @@ lab:
   title: '랩: Azure 파일 동기화 구현'
   type: Answer Key
   module: 'Module 10: Implementing a hybrid file server infrastructure'
-ms.openlocfilehash: 63f6e93a55997fb915a2bd89d6cb7b8a56058092
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 1acf83d29636f372d12e066e8f48b33f27aae718
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906985"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039382"
 ---
-# <a name="lab-implementing-azure-file-sync"></a>랩: Azure 파일 동기화 구현
+# <a name="lab-answer-key-implementing-azure-file-sync"></a>랩 답변 키: Azure 파일 동기화 구현
 
 ## <a name="exercise-1-implementing-distributed-file-system-dfs-replication-in-your-on-premises-environment"></a>연습 1: 온-프레미스 환경에서 DFS(분산 파일 시스템) 복제 구현
 
@@ -35,10 +35,10 @@ ms.locfileid: "137906985"
 
 1. **SEA-ADM1** 에서 **시작** 을 선택하고 **DFS** 를 입력한 다음 **DFS 관리를** 선택합니다.
 1. **DFS 관리** 의 탐색 창에서 **네임스페이스** 를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에 액세스한 다음 **표시할 네임스페이스 추가** 를 선택합니다.
-1. **표시할 네임스페이스 추가** 대화 상자의 네임스페이스 목록에서 **\\Contoso.com\Root** 를 선택한 다음 **확인** 을 선택합니다.
+1. **표시할 네임스페이스 추가** 대화 상자의 네임스페이스 목록에서 **\\\contoso.com\Root** 를 선택한 다음 **확인** 을 선택합니다.
 1. 탐색 창에서 **복제** 를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에 액세스한 다음 **표시할 복제 그룹 추가** 를 선택합니다.
 1. **표시할 복제 그룹 추가** 대화 상자의 **복제 그룹** 섹션에서 **Branch1** 을 선택한 다음 **확인** 을 선택합니다.
-1. 탐색 창에서 **\\Contoso.com\Root** 네임스페이스를 확장한 다음 **Data** 폴더를 선택합니다.
+1. 탐색 창에서 **\\\contoso.com\Root** 네임스페이스를 확장한 다음 **데이터** 폴더를 선택합니다.
 1. 세부 정보 창에서 **Data** 폴더에 **SEA-SVR1** 및 **SEA-SVR2** 의 **Data** 폴더에 대한 두 개의 조회가 있는지 확인합니다.
 1. 탐색 창에서 **Branch1** 을 선택합니다.
 1. 세부 정보 창에서 **SEA-SVR1** 및 **SEA-SVR2** 의 **S:\\Data** 폴더가 **Branch1** 복제 그룹의 구성원인지 확인합니다.
@@ -92,7 +92,7 @@ ms.locfileid: "137906985"
 1. **File1.txt** 파일이 세부 정보 창에 표시되는지 확인합니다. 이것은 Azure 파일 공유에 업로드한 파일입니다.
 1. **File1.txt** 를 두 번 클릭하거나 선택한 다음 Enter 키를 눌러 메모장에서 파일을 엽니다. 
 1. 메모장을 사용하여 마지막 줄에 자신의 이름을 추가하고, 변경 내용을 저장하고, 메모장을 닫아 파일 내용을 수정합니다.
-1. **File1** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에 액세스하여 **속성** 을 선택한 다음 **File1.txt 속성** 창에서 **이전 버전** 탭을 선택합니다.
+1. **File1** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에 액세스하여 **속성** 을 선택한 다음 **File1 속성** 창에서 **이전 버전** 탭을 선택합니다.
 1. 이전 파일 버전 하나를 사용할 수 있는지 확인합니다. 해당 버전(**File1.txt**)을 선택하고 **복원** 을 두 번 선택한 다음 **확인** 을 두 번 선택합니다.
 1. **File1.txt** 를 두 번 클릭하거나 선택하고 Enter 키를 선택한 다음 자신의 이름이 포함되어 있지 않음을 확인합니다. 이는 파일을 수정하기 전에 만든 스냅샷을 복원했기 때문입니다.
 1. **메모장** 을 닫습니다.

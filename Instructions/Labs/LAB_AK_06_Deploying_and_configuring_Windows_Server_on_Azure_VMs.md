@@ -3,12 +3,12 @@ lab:
   title: '랩: Azure VM에서 Windows Server 배포 및 구성'
   type: Answer Key
   module: 'Module 6: Deploying and Configuring Azure VMs'
-ms.openlocfilehash: 19550acaddcfe670775ddd8bcc56d7df05ef72be
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: 3d6e6a2ef296d3f6dcf02d3137f0aad887616b38
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907032"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039451"
 ---
 # <a name="lab-answer-key-deploying-and-configuring-windows-server-on-azure-vms"></a>랩 응답 키: Azure VM에서 Windows Server 배포 및 구성
 
@@ -30,20 +30,20 @@ ms.locfileid: "137907032"
 
 이 작업에서는 Azure Portal을 사용하여 리소스 그룹을 만들고 리소스 그룹에 디스크를 만듭니다.
 
-1. **SEA-ADM1** 에서, Azure Portal의 도구 모음에 있는 **리소스, 서비스 및 문서 검색** 텍스트 상자를 사용하여 **가상 머신** 을 검색하고 선택합니다. **가상 머신** 페이지에서 **+ 만들기** 를 선택한 다음, **가상 머신** 을 선택합니다.
+1. **SEA-ADM1** 에서, Azure Portal의 도구 모음에 있는 **리소스, 서비스 및 문서 검색** 텍스트 상자를 사용하여 **가상 머신** 을 검색하고 선택합니다. **가상 머신** 페이지에서 **+ 만들기** 를 선택한 다음, **Azure 가상 머신** 을 선택합니다.
 1. **가상 머신 만들기** 페이지의 **기본 사항** 탭에서 다음 설정을 지정하고 다른 모든 설정을 그 기본값을 그대로 두지만 배포하지 마세요.
 
    |설정|값|
    |---|---|
    |구독|이 랩에서 사용할 Azure 구독의 이름|
-   |리소스 그룹|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
+   |Resource group|새 리소스 그룹 **AZ800-L0601-RG** 의 이름|
    |가상 머신 이름|**az800l06-vm0**|
    |지역|Azure 가상 머신을 프로비전할 수 있는 Azure 지역의 이름을 사용합니다.|
    |가용성 옵션|인프라 중복 필요 없음|
    |이미지|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
    |Azure Spot 인스턴스|예|
    |크기|**Standard_D2s_v3**|
-   |사용자 이름|**Student**|
+   |사용자 이름|**학생**|
    |암호|**Pa55w.rd1234**|
    |공용 인바운드 포트|없음|
    |기존 Windows Server 라이선스를 사용하시겠습니까?|아니요|
@@ -54,7 +54,7 @@ ms.locfileid: "137907032"
    |---|---|
    |OS 디스크 유형|**표준 HDD**|
 
-1. **다음: 네트워킹 >** 을 선택하고 **가상 머신 만들기** 페이지의 **네트워킹** 탭에서 **가상 네트워크** 텍스트 상자* 뒤에 있는 **새로 만들기** 하이퍼링크를 선택합니다.
+1. **다음: 네트워킹 >** 을 선택하고 **가상 머신 만들기** 페이지의 **네트워킹** 탭에서 **가상 네트워크** 텍스트 상자 뒤에 있는 **새로 만들기** 하이퍼링크를 선택합니다.
 1. **가상 네트워크 만들기** 페이지에서 다음 설정을 지정하고 다른 모든 설정은 그 기본값을 그대로 두고 **확인** 을 선택합니다.
 
    |설정|값|
@@ -77,7 +77,7 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |부트 진단|**관리형 스토리지 계정으로 사용하도록 설정됨(권장)**|
+   |부트 진단|**관리형 스토리지 계정으로 활성화(권장)**|
    
 1. **다음: 고급 >** 을 선택하고, **가상 머신 만들기** 페이지의 **고급** 탭에서 사용 가능한 설정을 수정하지 않고 검토한 다음, **검토 + 만들기** 를 선택합니다.
 
@@ -104,6 +104,7 @@ ms.locfileid: "137907032"
 #### <a name="task-2-add-an-azure-vm-extension-section-to-the-existing-template"></a>작업 2: 기존 템플릿에 Azure VM 확장 섹션 추가
 
 1. **SEA-ADM1** 서, **template.json** 파일 내용을 표시하는 메모장에서 다음 코드를 `    "resources": [` 라인 바로 뒤에 삽입합니다.
+   >**참고**: 코드를 한 줄씩 붙여넣는 도구를 사용하는 경우 Intellisense가 유효성 검사 오류를 일으키는 괄호를 추가할 수 있습니다. 먼저 코드를 메모장에 붙여넣은 다음 코드를 JSON 파일에 붙여넣을 수 있습니다.
 
    ```json
         {
@@ -143,7 +144,7 @@ ms.locfileid: "137907032"
    |설정|값|
    |---|---|
    |구독|이 랩에서 사용 중인 Azure 구독의 이름|
-   |리소스 그룹|**AZ800-L0601-RG**|
+   |Resource group|**AZ800-L0601-RG**|
    |지역|Azure VM을 프로비전할 수 있는 Azure 지역의 이름|
    |관리자 암호|**Pa55w.rd1234**|
 
@@ -159,7 +160,7 @@ ms.locfileid: "137907032"
 1. **리소스 그룹** 페이지에서 **AZ800-L0601-RG** 항목을 선택합니다.
 1. **AZ800-L0601-RG** 페이지의 **개요** 페이지에서 Azure VM **az800l06-vm0** 을 포함한 리소스 목록을 검토합니다.
 1. 리소스 목록 내에서 Azure VM **az800l06-vm0** 항목을 선택합니다. 
-1. **az800l06-vm0** 페이지에서 **확장** 을 선택하고 확장 목록에서 **customScriptExtension** 이 성공적으로 프로비전되었는지 확인합니다.
+1. **az800l06-vm0** 페이지에서 **확장 + 애플리케이션** 을 선택하고 확장 목록에서 **customScriptExtension** 이 성공적으로 프로비저닝되었는지 확인합니다.
 1. **AZ800-L0601-RG** 페이지로 돌아가서 **설정** 섹션에서 **배포** 를 선택합니다.
 1. **AZ800-L0601-RG \| 배포** 페이지에서 **Microsoft.Template** 링크를 선택합니다.
 1. **Microsoft.Template \| 개요** 페이지에서 **템플릿** 을 선택합니다. 이것은 배포에 사용한 것과 동일한 템플릿입니다.
@@ -175,10 +176,10 @@ ms.locfileid: "137907032"
 1. **설정 \| 자동 프로비저닝** 페이지의 확장 목록에서 **Azure VM용 Log Analytics 에이전트** 항목의 오른쪽에 있는 **구성 편집** 링크를 선택합니다.
 1. **확장 배포 구성** 에서 **클라우드용 Defender 항목에서 만든 기본 작업 영역으로 Azure VM 연결** 항목을 선택하고 **적용** 을 선택한 다음 다시 **설정\| 자동 프로비저닝** 페이지에서 **저장** 을 선택합니다.
 
-#### <a name="task-2-review-just-in-time-vm-access-settings"></a>작업 2: Just-In-Time VM 액세스 설정 검토
+#### <a name="task-2-review-the-just-in-time-vm-access-settings"></a>작업 2: Just-In-Time VM 액세스 설정을 검토합니다.
 
 1. 클라우드용 Microsoft Defender의 **개요** 페이지로 다시 이동한 다음 **Cloud Security** 섹션에서 **워크로드 보호** 를 선택합니다.
-1. ***클라우드용 Microsoft Defender \| 워크로드 보호** 페이지에서 **Just-in-time VM 액세스** 를 선택합니다.
+1. **클라우드용 Microsoft Defender \| 워크로드 보호** 페이지에서 **Just-in-time VM 액세스** 를 선택합니다.
 1. **Just-In-Time VM 액세스** 페이지에서 **구성됨**, **구성되지 않음** 및 **지원되지 않음** 탭을 검토합니다.
 
    >**참고**: 새로 배포된 VM이 **지원되지 않음** 탭에 표시되려면 최대 24시간이 걸릴 수 있습니다. 기다리지 말고 다음 연습을 진행하세요.
@@ -194,7 +195,7 @@ ms.locfileid: "137907032"
    |설정|값|
    |---|---|
    |구독|이 랩에서 사용 중인 Azure 구독의 이름|
-   |리소스 그룹|**AZ800-L0601-RG**|
+   |Resource group|**AZ800-L0601-RG**|
    |이름|**az800l06-vm0-nsg1**|
    |지역|Azure VM **az800l06-vm0** 을 프로비전한 Azure 지역의 이름|
 
@@ -255,7 +256,7 @@ ms.locfileid: "137907032"
 
    |설정|값|
    |---|---|
-   |사용자 이름|**Student**|
+   |사용자 이름|**학생**|
    |암호|**Pa55w.rd1234**|
 
 1. 원격 데스크톱을 통해 Azure VM에서 실행하는 운영 체제에 성공적으로 액세스할 수 있는지 확인하고 원격 데스크톱 세션을 닫습니다.

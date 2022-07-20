@@ -3,12 +3,12 @@ lab:
   title: '랩: Windows Server에서 네트워크 인프라 서비스 구현 및 구성'
   type: Answer Key
   module: 'Module 7: Network Infrastructure services in Windows Server'
-ms.openlocfilehash: 1cac073eaffb0c24b73dc4e2731d89e2a143e568
-ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
+ms.openlocfilehash: 5157a50a5a5317acfcb7d38b68fa4e16e5201c01
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "144813029"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039385"
 ---
 # <a name="lab-answer-key-implementing-and-configuring-network-infrastructure-services-in-windows-server"></a>랩 정답 키: Windows Server에서 네트워크 인프라 서비스 구현 및 구성
 
@@ -26,7 +26,7 @@ ms.locfileid: "144813029"
    ```powershell
    Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
    ```
-1. 다음 명령을 입력한 후 Enter 키를 눌러 Windows Admin Center를 설치합니다.
+1. 다음 명령을 입력한 다음 Enter 키를 눌러 Windows Admin Center를 설치합니다.
     
    ```powershell
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
@@ -192,7 +192,7 @@ ms.locfileid: "144813029"
    - 동적 업데이트: **동적 업데이트 허용 안 함**
 
 1. DNS 창으로 돌아가서 **TreyResearch.net** 을 선택한 다음 **+ 새 DNS 레코드 만들기** 를 선택합니다.
-1. 새 DNS 레코드 만들기 창에서 다음 설정을 지정한 다음 **만들기** 를 선택합니다.
+1. **새 DNS 레코드 만들기** 창에서 다음 설정을 지정한 다음 **만들기** 를 선택합니다.
 
    - DNS 레코드 유형: **호스트(A)**
    - 레코드 이름: **TestApp**

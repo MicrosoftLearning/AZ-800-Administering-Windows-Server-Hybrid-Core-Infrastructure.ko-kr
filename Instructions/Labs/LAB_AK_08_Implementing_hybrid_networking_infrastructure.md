@@ -3,14 +3,14 @@ lab:
   title: '랩: Windows Server IaaS VM 네트워킹 구현'
   type: Answer Key
   module: 'Module 8: Implementing Windows Server IaaS VM networking'
-ms.openlocfilehash: b9ae6e391351ac7614b5129914173c78592309b0
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: f73953e8d4ceac6f4b7e2fd1f0c9ae267da1cf86
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137906983"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039403"
 ---
-# <a name="lab-implementing-hybrid-networking-infrastructure"></a>랩: 하이브리드 네트워킹 인프라 구현
+# <a name="lab-answer-key-implementing-hybrid-networking-infrastructure"></a>랩 답변 키: 하이브리드 네트워킹 인프라 구현
 
 ### <a name="exercise-1-implement-virtual-network-routing-in-azure"></a>연습 1: Azure에서 가상 네트워크 라우팅 구현
 
@@ -69,8 +69,8 @@ ms.locfileid: "137906983"
 
 1. **SEA-ADM1** 에서, Azure Portal을 표시하는 Microsoft Edge 창에서 탭을 하나 더 열고 **[Azure Portal](https://portal.azure.com)** 로 이동합니다.
 1. Azure Portal의 도구 모음의 **리소스, 서비스 및 문서 검색** 텍스트 상자에서 **가상 네트워크** 를 검색하여 선택합니다.
-1. 가상 네트워크 목록에서 **az800l08-vnet1** 을 선택합니다.
-1. **az800l08-vnet1** 가상 네트워크 페이지의 **설정** 섹션에서 **피어링** 을 선택한 다음 **+ 추가** 를 선택합니다.
+1. 가상 네트워크 목록에서 **az800l08-vnet0** 을 선택합니다.
+1. **az800l08-vnet0** 가상 네트워크 페이지의 **설정** 섹션에서 **피어링** 을 선택한 다음 **+ 추가** 를 선택합니다.
 1. 다음 설정을 지정하고(다른 설정은 기본값으로 유지) **추가** 를 선택합니다.
 
     | 설정 | 값 |
@@ -120,7 +120,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 소스 형식 | **가상 머신** |
     | 가상 머신 | **az800l08-vm0** |
@@ -139,7 +139,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 소스 형식 | **가상 머신** |
     | 가상 머신 | **az800l08-vm0** |
@@ -160,7 +160,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 소스 형식 | **가상 머신** |
     | 가상 머신 | **az800l08-vm1** |
@@ -213,7 +213,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 위치 | 가상 네트워크를 만든 Azure 지역의 이름 |
     | 이름 | **az800l08-rt12** |
@@ -236,7 +236,7 @@ ms.locfileid: "137906983"
 
     > **참고**: **10.80.0.4** 는 **az800l08-vm0** 의 개인 IP 주소를 나타냅니다. 
 
-1. **확인** 을 선택합니다.
+1. **추가** 를 선택합니다.
 1. 다시 **az800l08-rt12** 경로 테이블 페이지의 **설정** 섹션에서 **서브넷** 을 선택한 다음 **+ 연결** 을 선택합니다.
 1. 경로 테이블 **az800l08-rt12** 를 다음 서브넷과 연결합니다.
 
@@ -251,7 +251,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 지역 | 가상 네트워크를 만든 Azure 지역의 이름 |
     | 이름 | **az800l08-rt21** |
@@ -272,7 +272,7 @@ ms.locfileid: "137906983"
     | 다음 홉 유형 | **가상 어플라이언스** |
     | 다음 홉 주소 | **10.80.0.4** |
 
-1. **확인** 을 선택합니다.
+1. **추가** 를 선택합니다.
 1. 다시 **az800l08-rt21** 경로 테이블 페이지의 **설정** 섹션에서 **서브넷** 을 선택한 다음 **+ 연결** 을 선택합니다.
 1. 경로 테이블 **az800l08-rt21** 를 다음 서브넷과 연결합니다.
 
@@ -287,7 +287,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 소스 형식 | **가상 머신** |
     | 가상 머신 | **az800l08-vm1** |
@@ -310,7 +310,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | 새 리소스 그룹 **AZ800-L0802-RG** 의 이름 |
     | 이름 | **contoso.org** |
     | 리소스 그룹 위치 | 이 랩의 이전 연습에서 리소스를 배포하는 동일한 Azure 지역 |
@@ -345,7 +345,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | Resource group | **AZ800-L0801-RG** |
     | 소스 형식 | **가상 머신** |
     | 가상 머신 | **az800l08-vm1** |
@@ -368,7 +368,7 @@ ms.locfileid: "137906983"
 
     | 설정 | 값 |
     | --- | --- |
-    | Subscription | 이 랩에서 사용 중인 Azure 구독의 이름 |
+    | 구독 | 이 랩에서 사용 중인 Azure 구독의 이름 |
     | 리소스 그룹 | **AZ800-L0802-RG** |
     | 이름 | 이 작업의 앞부분에서 확인한 DNS 도메인 이름 |
 
@@ -421,13 +421,13 @@ ms.locfileid: "137906983"
 1. Cloud Shell 창에서 다음 명령을 실행하여 이 랩 전체에서 만든 리소스 그룹을 모두 나열합니다.
 
    ```powershell
-   Get-AzResourceGroup -Name 'az800l08*'
+   Get-AzResourceGroup -Name 'AZ800-L08*'
    ```
 
 1. 다음 명령을 실행하여 이 랩 전체에서 만든 리소스 그룹을 모두 삭제합니다.
 
    ```powershell
-   Get-AzResourceGroup -Name 'az800l08*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name 'AZ800-L08*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
    >**참고**: 이 명령은 *-AsJob* 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.

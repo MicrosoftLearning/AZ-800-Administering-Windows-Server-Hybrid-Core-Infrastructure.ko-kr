@@ -3,12 +3,12 @@ lab:
   title: '랩: 하이브리드 시나리오에서 Windows Admin Center 사용'
   type: Answer Key
   module: 'Module 4: Facilitating hybrid management'
-ms.openlocfilehash: b7f4d58c81945aae9c79d4cee0197f2fd1f1a407
-ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
+ms.openlocfilehash: 421d45b0bd0c9453ad44300759473539e7a82c03
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "144813035"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039448"
 ---
 # <a name="lab-answer-key-using-windows-admin-center-in-hybrid-scenarios"></a>랩 정답 키: 하이브리드 시나리오에서 Windows Admin Center 사용
 
@@ -72,7 +72,7 @@ ms.locfileid: "144813035"
    ```powershell
    Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
    ```
-1. 다음 명령을 입력한 후 Enter 키를 눌러 Windows Admin Center를 설치합니다.
+1. 다음 명령을 입력한 다음 Enter 키를 눌러 Windows Admin Center를 설치합니다.
     
    ```powershell
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
@@ -99,7 +99,7 @@ ms.locfileid: "144813035"
    >**참고**: Windows Admin Center 내의 **설정** 페이지에 Azure 창이 자동으로 표시됩니다.
 
 1. Windows Admin Center에 표시된 Azure 창의 **설정** 페이지에서 **등록** 을 선택합니다.
-1. Windows Admin Center에서 Azure 시작 창에서 **복사** 를 선택하여 등록 절차의 단계 목록에 표시된 코드를 복사합니다. 
+1. **Windows Admin Center에서 Azure 시작** 창에서 **복사** 를 선택하여 등록 절차의 단계 목록에 표시된 코드를 복사합니다. 
 1. 등록 절차의 단계 목록에서 **코드 입력** 링크를 선택합니다.
 
    >**참고**: Microsoft Edge 창에 **코드 입력** 페이지가 표시되는 다른 탭이 열립니다.
@@ -108,7 +108,7 @@ ms.locfileid: "144813035"
 1. **로그인** 페이지에 이전 연습에서 Azure 구독에 로그인하는 데 사용한 것과 같은 사용자 이름을 입력하고 **다음** 을 선택한 후 해당 암호를 입력하고 **로그인** 을 선택합니다.
 1. **Windows Admin Center에 로그인하시겠습니까?** 라는 메시지가 표시되면 **계속** 을 선택합니다.
 1. Windows Admin Center에서 로그인이 성공했는지 확인하고 Microsoft Edge 창에 새로 열린 탭을 닫습니다.
-1. Windows Admin Center에서 Azure 시작 창에서 **Azure Active Directory 애플리케이션** 이 **새로 만들기** 로 설정되어 있는지 확인하고 **연결** 을 선택합니다.
+1. **Windows Admin Center에서 Azure 시작** 창에서 **Azure Active Directory 애플리케이션** 이 **새로 만들기** 로 설정되어 있는지 확인하고 **연결** 을 선택합니다.
 1. 등록 절차의 단계 목록에서 **로그인** 을 선택합니다. 그러면 **요청된 권한** 이라는 레이블이 지정된 팝업 창이 열립니다.
 1. **요청된 권한** 팝업 창에서 **조직 대신 동의** 를 선택한 다음 **수락** 을 선택합니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "144813035"
 
 1. **SEA-ADM1** 에서 Windows Admin Center가 표시되는 Microsoft Edge 창으로 돌아가 **sea-svr2.contoso.com** 페이지로 이동한 다음 **네트워크** 를 선택합니다.
 1. Windows Admin Center의 **네트워크** 페이지에 있는 **작업** 메뉴에서 **+ Azure 네트워크 어댑터 추가(미리 보기)** 항목을 다시 선택합니다.
-1. 네트워크 어댑터 추가 설정 창에서 다음 설정을 지정한 다음 **만들기** 를 선택합니다(다른 설정은 기본값으로 유지).
+1. **네트워크 어댑터 추가** 설정 창에서 다음 설정을 지정한 다음 **만들기** 를 선택합니다(다른 설정은 기본값으로 유지).
 
    |설정|값|
    |---|---|
@@ -129,7 +129,7 @@ ms.locfileid: "144813035"
    |인증 인증서|자동 생성된 자체 서명된 루트 및 클라이언트 인증서|
 
 1. **SEA-ADM1** 에서, Azure Portal이 표시된 Microsoft Edge 창의 도구 모음에 있는 **리소스, 서비스 및 문서 검색** 텍스트 상자에서 **가상 네트워크 게이트웨이** 를 검색하고 선택합니다.
-1. **가상 네트워크 게이트웨이** 페이지에서 **새로 고침** 을 선택하고 **WAC-Created-vpngw-** 로 시작하는 이름의 새 항목이 가상 네트워크 게이트웨이 목록에 표시되는지 확인합니다.
+1. **가상 네트워크 게이트웨이** 페이지에서 **새로 고침** 을 선택하고 **WAC-Created-vpngw-96** 으로 시작하는 이름의 새 항목이 가상 네트워크 게이트웨이 목록에 표시되는지 확인합니다.
 
 >**참고**: Azure 가상 네트워크 게이트웨이 프로비전은 최대 45분이 소요됩니다. 프로비전이 완료될 때까지 기다리지 말고 다음 연습을 진행하세요.
 

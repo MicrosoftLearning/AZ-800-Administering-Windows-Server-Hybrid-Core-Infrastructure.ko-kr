@@ -3,14 +3,14 @@ lab:
   title: '랩: AD DS와 Azure AD 간의 통합 구현'
   type: Answer Key
   module: 'Module 2: Implementing Identity in Hybrid Scenarios'
-ms.openlocfilehash: 7defc132d092b6db2286718a9bfd5ce619c7b632
-ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
+ms.openlocfilehash: eeedd9f2c83c2165ad1799ff503706629a4ec70a
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "144813026"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039430"
 ---
-# <a name="lab-implementing-integration-between-ad-ds-and-azure-ad"></a>랩: AD DS와 Azure AD 간의 통합 구현
+# <a name="lab-answer-key-implementing-integration-between-ad-ds-and-azure-ad"></a>랩 답변 키: AD DS와 Azure AD 간의 통합 구현
 
 ## <a name="exercise-1-preparing-azure-ad-for-ad-ds-integration"></a>연습 1: AD DS 통합을 위한 Azure AD 준비
 
@@ -123,7 +123,7 @@ ms.locfileid: "144813026"
 #### <a name="task-3-update-a-user-account-in-active-directory"></a>작업 3: Active Directory에서 사용자 계정 업데이트
 
 1. **SEA-ADM1** 의 서버 관리자에 있는 **도구** 메뉴에서 **Active Directory 사용자 및 컴퓨터** 를 선택합니다.
-1. **Active Directory 사용자 및 컴퓨터** 에서 **영업** OU(조직 구성 단위)를 확장한 다음 **Ben Miller** 의 속성을 엽니다.
+1. **Active Directory 사용자 및 컴퓨터** 에서 **영업** OU(조직 구성 단위)를 확장한 다음 **Sumesh Rajan** 의 속성을 엽니다.
 1. 사용자의 속성에서 **조직** 탭을 선택합니다.
 1. **직함** 텍스트 상자에 **관리자** 를 입력한 다음 **확인을** 선택합니다.
 
@@ -154,8 +154,8 @@ ms.locfileid: "144813026"
 
 1. **SEA-ADM1** 에서 Azure Portal을 표시하는 Microsoft Edge 창으로 전환하고 **Azure Active Directory** 페이지로 돌아갑니다.
 1. **Azure Active Directory** 페이지에서 **사용자** 를 선택합니다.
-1. **모든 사용자** 페이지에서 사용자 **Ben** 을 검색합니다.
-1. 사용자 **Ben Miller** 의 속성 페이지를 열고 Active Directory에서 **직함** 특성이 동기화되었는지 확인합니다.
+1. **모든 사용자** 페이지에서 사용자 **Sumesh** 를 검색합니다.
+1. 사용자 **Sumesh Rajan** 의 속성 페이지를 열고 Active Directory에서 **직위** 특성이 동기화되었는지 확인합니다.
 1. Microsoft Edge에서 **모든 사용자** 페이지로 돌아갑니다.
 1. **모든 사용자** 페이지에서 사용자 **Jordan** 을 검색합니다.
 1. 사용자 **Jordan Mitchell** 의 속성 페이지를 열고 Active Directory에서 동기화된 사용자 계정의 특성을 검토합니다.
@@ -232,7 +232,7 @@ ms.locfileid: "144813026"
 #### <a name="task-5-install-and-register-the-azure-ad-password-protection-proxy-service-and-dc-agent"></a>작업 5: Azure AD 암호 보호 프록시 서비스 및 DC 에이전트 설치 및 등록
 
 1. **SEA-ADM1** 에서 Microsoft Edge 시작하고 Microsoft 다운로드 웹 사이트로 이동하여 설치 관리자를 다운로드할 수 있는 **Windows Server Active Directory용 Azure AD 암호 보호** 페이지로 이동한 다음 **다운로드** 를 선택합니다.
-1. **Windows Server Active Directory용 Azure AD 암호 보호** 페이지에서 **AzureADPasswordProtectionProxySetup.msi** 및 **AzureADPasswordProtectionDCAgentSetup.msi** 파일을 선택한 다음, **다음** 을 선택합니다.
+1. **Windows Server Active Directory용 Azure AD 암호 보호** 페이지에서 **AzureADPasswordProtectionProxySetup.exe** 및 **AzureADPasswordProtectionDCAgentSetup.msi** 파일을 선택한 다음, **다음** 을 선택합니다.
 1. **다운로드** 를 선택합니다.
 1. **여러 파일 다운로드** 대화 상자에서 **허용** 을 선택합니다.
 
@@ -244,7 +244,7 @@ ms.locfileid: "144813026"
    ```powershell
    Get-ChildItem -Path "$env:USERPROFILE\Downloads" -File | Unblock-File
    ```
-1. 다음 명령을 실행하여 **SEA-SVR1** 에서 **C:\Temp** 디렉터리를 만들고 **AzureADPasswordProtectionProxySetup.msi** 설치 관리자를 해당 디렉터리에 복사한 다음, 설치를 호출합니다.
+1. 다음 명령을 실행하여 **SEA-SVR1** 에서 **C:\Temp** 디렉터리를 만들고 **zureADPasswordProtectionProxySetup.exe** 설치 관리자를 해당 디렉터리에 복사한 다음, 설치를 호출합니다.
 
    ```powershell
    New-Item -Type Directory -Path '\\SEA-SVR1.contoso.com\C$\Temp' -Force

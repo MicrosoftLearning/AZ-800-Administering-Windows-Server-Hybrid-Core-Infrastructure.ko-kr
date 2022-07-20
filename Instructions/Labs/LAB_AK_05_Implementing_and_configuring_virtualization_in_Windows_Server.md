@@ -3,12 +3,12 @@ lab:
   title: '랩: Windows Server에서 가상화 구현 및 구성'
   type: Answer Key
   module: 'Module 5: Hyper-V virtualization in Windows Server'
-ms.openlocfilehash: 9d245ed491ca11a2513ba5bc61627331324aab99
-ms.sourcegitcommit: fd8252ad223934b8c3e178706dbc03a8fd9bb030
+ms.openlocfilehash: 34dc334218d43b71f9b48b12c066fdcfcb605ccb
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "144813034"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039439"
 ---
 # <a name="lab-answer-key-implementing-and-configuring-virtualization-in-windows-server"></a>랩 응답 키: Windows Server에서 가상화 구현 및 구성
 
@@ -20,7 +20,7 @@ ms.locfileid: "144813034"
 1. **SEA-ADM1** 에서 **시작을** 선택한 다음 **서버 관리자** 를 선택합니다.
 1. 서버 관리자에서 **모든 서버** 를 선택합니다.
 1. 서버 목록에서 **SEA-SVR1** 항목을 선택하고 상황에 맞는 메뉴를 표시한 다음 **Hyper-V 관리자** 를 선택합니다.
-1. Hyper-V 관리자에서 **SEA-SVR1.Contoso.com** 이 선택된 Hyper-V 서버인지 확인합니다.
+1. Hyper-V 관리자에서 **SEA-SVR1.CONTOSO.COM** 이 선택되었는지 확인합니다.
 1. 작업 창에서 **가상 스위치 관리자** 를 선택합니다.
 1. **가상 스위치 관리자** 의 **가상 스위치 만들기** 창에서 **프라이빗** 을 선택한 다음 **가상 스위치 만들기** 를 선택합니다.
 1. **가상 스위치 속성** 상자에서 다음 설정을 지정한 다음 **확인** 을 선택합니다.
@@ -103,7 +103,7 @@ ms.locfileid: "144813034"
 1. **설정** 을 선택한 다음 **디스크** 를 선택합니다.
 1. 창 맨 아래로 스크롤하여 **+ 디스크 추가** 를 선택합니다.
 1. **새 가상 하드 디스크** 를 선택합니다.
-1. 새 가상 하드 디스크 창의 **크기(GB)** 텍스트 상자에 **5** 를 입력하고 다른 설정은 기본값으로 그대로 두고 **만들기** 를 선택합니다.
+1. **새 가상 하드 디스크** 창의 **크기(GB)** 텍스트 상자에 **5** 를 입력하고 다른 설정은 기본값으로 그대로 두고 **만들기** 를 선택합니다.
 1. **디스크 설정 저장** 을 선택한 다음 **닫기** 를 선택합니다.
 1. **SEA-VM1** 의 **속성** 창으로 돌아가서 **전원** 을 선택한 다음 **시작** 을 선택하여 **SEA-VM1** 을 시작합니다.
 1. 아래로 스크롤하여 실행 중인 VM에 대한 통계를 표시합니다.
@@ -172,11 +172,6 @@ ms.locfileid: "144813034"
 
    > **참고**: 로컬 리포지토리 저장소에 이미지가 없는지 확인합니다.
 
-1. 다음 명령을 입력한 다음 Enter 키를 눌러 온라인 Microsoft 리포지토리의 Docker 기본 이미지를 나열합니다.
-
-   ```powershell
-   docker search microsoft
-   ```
 1. 다음 명령을 입력한 다음 Enter 키를 눌러 IIS(Internet Information Services) 설치가 포함된 Nano 서버 이미지를 다운로드합니다.
 
    ```powershell
@@ -228,7 +223,7 @@ ms.locfileid: "144813034"
 #### <a name="task-3-use-windows-admin-center-to-manage-containers"></a>작업 3: Windows Admin Center를 사용하여 컨테이너 관리
 
 1. **SEA-ADM1** 의 Windows Admin Center에 있는 **sea-svr1.contoso.com** 의 도구 메뉴에서 **컨테이너** 를 선택합니다. **PowerShell** 세션을 닫기 여부를 묻는 메시지가 표시되면 **계속** 을 선택합니다.
-1. 컨테이너 창에서 **요약**, **컨테이너**, **이미지**, **네트워크** 및 **볼륨** 탭을 탐색합니다.
+1. 컨테이너 창에서 **개요**, **컨테이너**, **이미지**, **네트워크** 및 **볼륨** 탭을 탐색합니다.
 
 ### <a name="exercise-2-results"></a>연습 2 결과
 

@@ -2,12 +2,12 @@
 lab:
   title: '랩: 하이브리드 시나리오에서 Windows Admin Center 사용'
   module: 'Module 4: Facilitating hybrid management'
-ms.openlocfilehash: e380f49ae9b53ee46e48a21ac40e40cbddd51852
-ms.sourcegitcommit: bd43c7961e93ef200b92fb1d6f09d9ad153dd082
+ms.openlocfilehash: a39562df5131e07d2cb50634629bbb40a15f82c8
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "137907024"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039388"
 ---
 # <a name="lab-using-windows-admin-center-in-hybrid-scenarios"></a>랩: 하이브리드 시나리오에서 Windows Admin Center 사용
 
@@ -173,14 +173,14 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
    ```powershell
    Enable-AzureRmAlias -Scope Process
    ```
-1. 다음 명령을 실행하여 Windows Admin Center 프로비전 스크립트를 실행하는 데 필요한 변수의 값을 설정합니다.
+1. 다음 명령을 실행하여 Windows Admin Center 프로비저닝 스크립트를 실행하는 데 필요한 변수 값을 설정합니다(`<Azure region>` 자리 표시자를 이 랩의 앞부분에서 리소스를 배포하는 Azure 지역 이름(예: **eastus**)으로 바꿉니다.)
 
    ```powershell
    $rgName = 'AZ800-L0401-RG'
    $vnetName = 'az800l04-vnet'
    $nsgName = 'az800l04-web-nsg'
    $subnetName = 'subnet1'
-   $location = 'eastus'
+   $location = '<Azure region>'
    $pipName = 'wac-public-ip'
    $size = 'Standard_D2s_v3'
    ```
@@ -194,9 +194,10 @@ Windows Server OS를 실행하는 Azure VM을 Windows Admin Center를 사용하�
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
+     PublicIPAddressName = $pipname
    }
    ```
-1. 다음 명령을 실행하여 PowerShell 원격 작업에 인증서 확인을 사용하지 않도록 설정합니다.
+1. 다음 명령을 실행하여 PowerShell 원격에 대한 인증서 확인을 사용하지 않도록 설정합니다(첫 번째 명령 다음에 메시지가 표시되면 **A** 를 입력하고 Enter 키를 누릅니다).
 
    ```powershell
    install-module pswsman

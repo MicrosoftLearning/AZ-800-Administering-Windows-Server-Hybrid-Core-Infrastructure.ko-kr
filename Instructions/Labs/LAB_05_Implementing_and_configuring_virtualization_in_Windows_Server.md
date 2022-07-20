@@ -2,12 +2,12 @@
 lab:
   title: '랩: Windows Server에서 가상화 구현 및 구성'
   module: 'Module 5: Hyper-V virtualization in Windows Server'
-ms.openlocfilehash: e9b70ecdc5eef196b00ea2d0c88471c779d6d701
-ms.sourcegitcommit: 33fdeedf81ac2a39e09176f7a4b7a72b983a072f
+ms.openlocfilehash: 7120bfad95a023f547426f44af6a775b98dbf491
+ms.sourcegitcommit: d34dce53481b0263d0ff82913b3f49cb173d5c06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742073"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "147039391"
 ---
 # <a name="lab-implementing-and-configuring-virtualization-in-windows-server"></a>랩: Windows Server에서 가상화 구현 및 구성
 
@@ -188,11 +188,6 @@ Contoso는 미국 시애틀에 본사가 있는 글로벌 엔지니어링 및 �
 
    > **참고**: 로컬 리포지토리 저장소에 이미지가 없는지 확인합니다.
 
-1. 다음 명령을 실행하여 온라인 Microsoft 리포지토리의 Docker 기본 이미지를 나열합니다.
-
-   ```powershell
-   docker search microsoft
-   ```
 1. 다음 명령을 실행하여 IIS(인터넷 정보 서비스) 설치가 포함된 Nano 서버 이미지를 다운로드합니다.
 
    ```powershell
@@ -244,7 +239,7 @@ Contoso는 미국 시애틀에 본사가 있는 글로벌 엔지니어링 및 �
 #### <a name="task-3-use-windows-admin-center-to-manage-containers"></a>작업 3: Windows Admin Center를 사용하여 컨테이너 관리
 
 1. **SEA-ADM1** 의 Windows Admin Center에 있는 **sea-svr1.contoso.com** 의 **도구** 메뉴에서 **컨테이너** 를 선택합니다. **PowerShell** 세션을 닫기 여부를 묻는 메시지가 표시되면 **계속** 을 선택합니다.
-1. 컨테이너 창에서 **요약**, **컨테이너**, **이미지**, **네트워크** 및 **볼륨** 탭을 탐색합니다.
+1. 컨테이너 창에서 **개요**, **컨테이너**, **이미지**, **네트워크** 및 **볼륨** 탭을 탐색합니다.
 
 ### <a name="exercise-2-results"></a>연습 2 결과
 
