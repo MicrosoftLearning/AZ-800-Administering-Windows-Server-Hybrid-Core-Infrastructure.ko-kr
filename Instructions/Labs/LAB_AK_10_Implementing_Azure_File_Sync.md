@@ -55,7 +55,7 @@ ms.locfileid: "147039382"
 
 ### <a name="task-1-create-an-azure-file-share"></a>작업 1: Azure 파일 공유 만들기
 
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 **[Azure Portal](https://portal.azure.com)** 로 이동한 다음, 이 랩에서 사용할 구독에서 소유자 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 **[Azure Portal](https://portal.azure.com)** 로 이동한 다음, 이 랩에서 사용할 구독에서 Owner 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
 1. Azure Portal에서 도구 모음의 **리소스, 서비스 및 문서 검색** 텍스트 상자를 사용하여 **스토리지 계정** 을 검색하고 선택합니다.
 1. **스토리지 계정** 페이지에서 **+ 만들기** 를 선택합니다.
 1. **스토리지 계정 만들기** 페이지의 **기본 사항** 탭에서 다음 설정을 지정합니다.

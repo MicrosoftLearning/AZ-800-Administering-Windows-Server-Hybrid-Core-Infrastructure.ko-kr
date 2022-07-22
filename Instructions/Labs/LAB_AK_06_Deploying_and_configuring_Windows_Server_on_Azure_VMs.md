@@ -19,7 +19,7 @@ ms.locfileid: "147039451"
 이 작업에서는 Azure 구독에 연결하고 클라우드용 Microsoft Defender의 향상된 보안을 사용하도록 설정합니다.
 
 1. **SEA-ADM1** 에 연결한 다음, 필요하다면 **Pa55w.rd** 암호를 이용해 **CONTOSO\\Administrator** 로 로그인합니다.
-1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 소유자 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
+1. **SEA-ADM1** 에서 Microsoft Edge를 시작하고 [Azure Portal](https://portal.azure.com)로 이동한 다음, 이 랩에서 사용할 구독에서 Owner 역할이 있는 사용자 계정의 자격 증명을 사용하여 로그인합니다.
 
 >**참고**: Azure 구독에서 클라우드용 Microsoft Defender를 이미 사용하도록 설정했다면 이 작업의 나머지 단계를 건너뛰고 다음 단계로 바로 이동하세요.
 
